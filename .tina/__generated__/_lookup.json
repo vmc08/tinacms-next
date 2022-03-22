@@ -1,0 +1,41 @@
+{
+  "DocumentConnection": {
+    "type": "DocumentConnection",
+    "resolveType": "multiCollectionDocumentList",
+    "collections": ["pages"]
+  },
+  "Node": {
+    "type": "Node",
+    "resolveType": "nodeDocument"
+  },
+  "DocumentNode": {
+    "type": "DocumentNode",
+    "resolveType": "multiCollectionDocument",
+    "createDocument": "create",
+    "updateDocument": "update"
+  },
+  "PagesBlocks": {
+    "type": "PagesBlocks",
+    "resolveType": "unionData",
+    "typeMap": {
+      "navigation": "PagesBlocksNavigation",
+      "hero": "PagesBlocksHero",
+      "projects": "PagesBlocksProjects",
+      "vision": "PagesBlocksVision",
+      "values": "PagesBlocksValues",
+      "footer": "PagesBlocksFooter"
+    }
+  },
+  "PagesDocument": {
+    "type": "PagesDocument",
+    "resolveType": "collectionDocument",
+    "collection": "pages",
+    "createPagesDocument": "create",
+    "updatePagesDocument": "update"
+  },
+  "PagesConnection": {
+    "type": "PagesConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "pages"
+  }
+}

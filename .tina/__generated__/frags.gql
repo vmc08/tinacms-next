@@ -1,0 +1,43 @@
+fragment PagesParts on Pages {
+  blocks {
+    __typename
+    ... on PagesBlocksNavigation {
+      menuItems {
+        __typename
+        label
+        link
+      }
+    }
+    ... on PagesBlocksHero {
+      title
+      description
+      image
+    }
+    ... on PagesBlocksProjects {
+      projectItem {
+        __typename
+        link
+        image
+      }
+    }
+    ... on PagesBlocksVision {
+      title
+      description
+    }
+    ... on PagesBlocksValues {
+      title
+      valueItems {
+        __typename
+        image
+        description
+      }
+    }
+    ... on PagesBlocksFooter {
+      menuItems {
+        __typename
+        label
+        link
+      }
+    }
+  }
+}
