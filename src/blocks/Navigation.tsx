@@ -6,7 +6,7 @@ import { PagesBlocksNavigation } from '../../.tina/__generated__/types'
 const MainNavigation: React.FC<PagesBlocksNavigation> = (props) => {
   const showDekstopNav = useBreakpointValue({ xl: true })
   return (
-    <Box py={{ xs: 4, lg: 5 }}>
+    <Box py={4}>
       <ResponsiveContainer>
         {showDekstopNav ? <Navigation.DesktopNavigation {...props} /> : <Navigation.MobileNavigation {...props} />}
       </ResponsiveContainer>

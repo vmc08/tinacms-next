@@ -20,6 +20,24 @@ const navigation: TinaTemplate = {
           label: 'Link',
           name: 'link',
         },
+        {
+          type: 'object',
+          label: 'Sub Menu',
+          name: 'subMenuItems',
+          list: true,
+          fields: [
+            {
+              type: 'string',
+              label: 'Label',
+              name: 'label',
+            },
+            {
+              type: 'string',
+              label: 'Link',
+              name: 'link',
+            },
+          ],
+        },
       ],
     },
   ],

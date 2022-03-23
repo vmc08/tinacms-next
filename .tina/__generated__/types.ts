@@ -136,10 +136,17 @@ export type CollectionDocumentsArgs = {
 
 export type DocumentNode = PagesDocument
 
+export type PagesBlocksNavigationMenuItemsSubMenuItems = {
+  __typename?: 'PagesBlocksNavigationMenuItemsSubMenuItems'
+  label?: Maybe<Scalars['String']>
+  link?: Maybe<Scalars['String']>
+}
+
 export type PagesBlocksNavigationMenuItems = {
   __typename?: 'PagesBlocksNavigationMenuItems'
   label?: Maybe<Scalars['String']>
   link?: Maybe<Scalars['String']>
+  subMenuItems?: Maybe<Array<Maybe<PagesBlocksNavigationMenuItemsSubMenuItems>>>
 }
 
 export type PagesBlocksNavigation = {
@@ -272,9 +279,15 @@ export type DocumentMutation = {
   pages?: InputMaybe<PagesMutation>
 }
 
+export type PagesBlocksNavigationMenuItemsSubMenuItemsMutation = {
+  label?: InputMaybe<Scalars['String']>
+  link?: InputMaybe<Scalars['String']>
+}
+
 export type PagesBlocksNavigationMenuItemsMutation = {
   label?: InputMaybe<Scalars['String']>
   link?: InputMaybe<Scalars['String']>
+  subMenuItems?: InputMaybe<Array<InputMaybe<PagesBlocksNavigationMenuItemsSubMenuItemsMutation>>>
 }
 
 export type PagesBlocksNavigationMutation = {
@@ -342,6 +355,11 @@ export type PagesPartsFragment = {
           __typename: 'PagesBlocksNavigationMenuItems'
           label?: string | null
           link?: string | null
+          subMenuItems?: Array<{
+            __typename: 'PagesBlocksNavigationMenuItemsSubMenuItems'
+            label?: string | null
+            link?: string | null
+          } | null> | null
         } | null> | null
       }
     | { __typename: 'PagesBlocksHero'; title?: string | null; description?: string | null; image?: string | null }
@@ -402,6 +420,11 @@ export type GetPagesDocumentQuery = {
               __typename: 'PagesBlocksNavigationMenuItems'
               label?: string | null
               link?: string | null
+              subMenuItems?: Array<{
+                __typename: 'PagesBlocksNavigationMenuItemsSubMenuItems'
+                label?: string | null
+                link?: string | null
+              } | null> | null
             } | null> | null
           }
         | { __typename: 'PagesBlocksHero'; title?: string | null; description?: string | null; image?: string | null }
@@ -467,6 +490,11 @@ export type GetPagesListQuery = {
                   __typename: 'PagesBlocksNavigationMenuItems'
                   label?: string | null
                   link?: string | null
+                  subMenuItems?: Array<{
+                    __typename: 'PagesBlocksNavigationMenuItemsSubMenuItems'
+                    label?: string | null
+                    link?: string | null
+                  } | null> | null
                 } | null> | null
               }
             | {
@@ -518,6 +546,11 @@ export const PagesPartsFragmentDoc = gql`
           __typename
           label
           link
+          subMenuItems {
+            __typename
+            label
+            link
+          }
         }
       }
       ... on PagesBlocksHero {

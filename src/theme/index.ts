@@ -4,6 +4,7 @@
  */
 import { extendTheme } from '@chakra-ui/react'
 import { createBreakpoints } from '@chakra-ui/theme-tools'
+import Menu from './components/menu'
 
 const breakpoints = createBreakpoints({
   xs: '17.5em',
@@ -15,4 +16,7 @@ const breakpoints = createBreakpoints({
 
 export default extendTheme({
   breakpoints,
+  components: {
+    Menu,
+  },
 })

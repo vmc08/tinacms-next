@@ -77,9 +77,15 @@ type Collection {
 
 union DocumentNode = PagesDocument
 
+type PagesBlocksNavigationMenuItemsSubMenuItems {
+  label: String
+  link: String
+}
+
 type PagesBlocksNavigationMenuItems {
   label: String
   link: String
+  subMenuItems: [PagesBlocksNavigationMenuItemsSubMenuItems]
 }
 
 type PagesBlocksNavigation {
@@ -163,9 +169,15 @@ input DocumentMutation {
   pages: PagesMutation
 }
 
+input PagesBlocksNavigationMenuItemsSubMenuItemsMutation {
+  label: String
+  link: String
+}
+
 input PagesBlocksNavigationMenuItemsMutation {
   label: String
   link: String
+  subMenuItems: [PagesBlocksNavigationMenuItemsSubMenuItemsMutation]
 }
 
 input PagesBlocksNavigationMutation {

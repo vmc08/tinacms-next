@@ -21,6 +21,10 @@ const query = `
             menuItems {
               label
               link
+              subMenuItems {
+                label
+                link
+              }
             }
           }
           ... on PagesBlocksHero {

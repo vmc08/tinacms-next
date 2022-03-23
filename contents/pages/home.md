@@ -1,10 +1,18 @@
 ---
 blocks:
   - menuItems:
-      - label: Aboutqweqweqwe
-        link: /about
       - label: Home
         link: /
+      - label: Pricing
+        subMenuItems:
+          - label: Pricing A
+            link: /pricing/pricing-a
+          - label: Pricing B
+            link: /pricing/pricing-b
+      - label: About us
+        link: /about
+      - label: Contact
+        link: /contact
     _template: navigation
   - title: This is hero
     description: >-

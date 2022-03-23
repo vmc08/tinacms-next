@@ -6,6 +6,11 @@ fragment PagesParts on Pages {
         __typename
         label
         link
+        subMenuItems {
+          __typename
+          label
+          link
+        }
       }
     }
     ... on PagesBlocksHero {

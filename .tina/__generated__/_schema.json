@@ -39,6 +39,27 @@
                       "label": "Link",
                       "name": "link",
                       "namespace": ["pages", "blocks", "navigation", "menuItems", "link"]
+                    },
+                    {
+                      "type": "object",
+                      "label": "Sub Menu",
+                      "name": "subMenuItems",
+                      "list": true,
+                      "fields": [
+                        {
+                          "type": "string",
+                          "label": "Label",
+                          "name": "label",
+                          "namespace": ["pages", "blocks", "navigation", "menuItems", "subMenuItems", "label"]
+                        },
+                        {
+                          "type": "string",
+                          "label": "Link",
+                          "name": "link",
+                          "namespace": ["pages", "blocks", "navigation", "menuItems", "subMenuItems", "link"]
+                        }
+                      ],
+                      "namespace": ["pages", "blocks", "navigation", "menuItems", "subMenuItems"]
                     }
                   ],
                   "namespace": ["pages", "blocks", "navigation", "menuItems"]
