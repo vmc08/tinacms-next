@@ -34,7 +34,13 @@ const DesktopNavigation: React.FC<PagesBlocksNavigation> = ({ menuItems }) => {
             const hasChildren = menuItem?.subMenuItems?.length
             const dynamicKey = `${menuItem?.link}-${idx}`
             return hasChildren ? (
-              <Menu key={dynamicKey} label={menuItem?.label} subMenuItems={menuItem.subMenuItems} />
+              <Menu
+                key={dynamicKey}
+                label={menuItem?.label}
+                subMenuItems={menuItem.subMenuItems}
+                menuSize="sm"
+                buttonSize="sm"
+              />
             ) : (
               <Button size="sm" variant="ghost" key={dynamicKey}>
                 {menuItem?.label}
