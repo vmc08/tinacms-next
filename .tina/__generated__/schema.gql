@@ -88,8 +88,15 @@ type PagesBlocksNavigationMenuItems {
   subMenuItems: [PagesBlocksNavigationMenuItemsSubMenuItems]
 }
 
+type PagesBlocksNavigationRightMenuItems {
+  label: String
+  link: String
+  variant: String
+}
+
 type PagesBlocksNavigation {
   menuItems: [PagesBlocksNavigationMenuItems]
+  rightMenuItems: [PagesBlocksNavigationRightMenuItems]
 }
 
 type PagesBlocksHero {
@@ -180,8 +187,15 @@ input PagesBlocksNavigationMenuItemsMutation {
   subMenuItems: [PagesBlocksNavigationMenuItemsSubMenuItemsMutation]
 }
 
+input PagesBlocksNavigationRightMenuItemsMutation {
+  label: String
+  link: String
+  variant: String
+}
+
 input PagesBlocksNavigationMutation {
   menuItems: [PagesBlocksNavigationMenuItemsMutation]
+  rightMenuItems: [PagesBlocksNavigationRightMenuItemsMutation]
 }
 
 input PagesBlocksHeroMutation {

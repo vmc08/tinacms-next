@@ -12,6 +12,12 @@ fragment PagesParts on Pages {
           link
         }
       }
+      rightMenuItems {
+        __typename
+        label
+        link
+        variant
+      }
     }
     ... on PagesBlocksHero {
       title

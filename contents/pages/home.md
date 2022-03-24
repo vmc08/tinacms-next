@@ -13,6 +13,13 @@ blocks:
         link: /about
       - label: Contact
         link: /contact
+    rightMenuItems:
+      - label: Login
+        link: /login
+        variant: outline
+      - label: Sign up
+        link: /sign-up
+        variant: solid
     _template: navigation
   - title: This is hero
     description: >-

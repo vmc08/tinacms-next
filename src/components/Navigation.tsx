@@ -1,15 +1,5 @@
 import { useRef } from 'react'
-import {
-  Box,
-  Flex,
-  HStack,
-  Icon,
-  IconButton,
-  useBreakpointValue,
-  useDisclosure,
-  VStack,
-  Collapse,
-} from '@chakra-ui/react'
+import { Box, Flex, HStack, Icon, IconButton, useDisclosure, VStack, Collapse, ButtonProps } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@heroicons/react/outline'
 import { MenuAlt3Icon, XIcon } from '@heroicons/react/solid'
 
@@ -20,60 +10,68 @@ import Menu from '@components/Menu'
 import { PagesBlocksNavigation } from '../../.tina/__generated__/types'
 
 const LOGO = '/logo.png'
+const LOGO_SIZE = 32 || 0
 
-const DesktopNavigation: React.FC<PagesBlocksNavigation> = ({ menuItems }) => {
-  const imageHeight = 32 || 0
-  return (
-    <Flex justifyContent="space-between" d={{ xs: 'none', xl: 'flex' }}>
-      <Flex>
-        <Flex mr="8" flexShrink={0}>
-          <Image height={imageHeight} width={imageHeight} src={LOGO} alt="High Output Ventures" />
-        </Flex>
-        <HStack spacing="2" height={8}>
-          {menuItems?.map((menuItem, idx) => {
-            const hasChildren = menuItem?.subMenuItems?.length
-            const dynamicKey = `${menuItem?.link}-${idx}`
-            return hasChildren ? (
-              <Menu
-                key={dynamicKey}
-                label={menuItem?.label}
-                subMenuItems={menuItem.subMenuItems}
-                menuSize="sm"
-                buttonSize="sm"
-              />
-            ) : (
-              <Button size="sm" variant="ghost" key={dynamicKey}>
-                {menuItem?.label}
-              </Button>
-            )
-          })}
-        </HStack>
+const DesktopNavigation: React.FC<PagesBlocksNavigation> = ({ menuItems, rightMenuItems }) => (
+  <Flex justifyContent="space-between" d={{ xs: 'none', xl: 'flex' }}>
+    <Flex>
+      <Flex mr="8" flexShrink={0}>
+        <Image height={LOGO_SIZE} width={LOGO_SIZE} src={LOGO} alt="High Output Ventures" />
       </Flex>
-      <HStack spacing={4}>
-        <Button variant="outline" size="sm">
-          Login
-        </Button>
-        <Button size="sm" colorScheme="blue">
-          Sign up
-        </Button>
+      <HStack spacing="2" height={8}>
+        {menuItems?.map((menuItem, idx) => {
+          const hasChildren = menuItem?.subMenuItems?.length
+          const dynamicKey = `${menuItem?.link}-${idx}`
+          return hasChildren ? (
+            <Menu
+              key={dynamicKey}
+              label={menuItem?.label}
+              subMenuItems={menuItem.subMenuItems}
+              menuSize="sm"
+              buttonSize="sm"
+            />
+          ) : (
+            <Button size="sm" variant="ghost" key={dynamicKey}>
+              {menuItem?.label}
+            </Button>
+          )
+        })}
       </HStack>
     </Flex>
-  )
-}
+    <HStack spacing={4}>
+      {rightMenuItems?.map((rightMenuItem, idx) => {
+        const variant = rightMenuItem?.variant as ButtonProps['variant']
+        const isSolid = variant === 'solid'
+        return (
+          <Button
+            key={idx}
+            variant={variant}
+            size="sm"
+            {...(isSolid && {
+              colorScheme: 'blue',
+            })}
+          >
+            {rightMenuItem?.label}
+          </Button>
+        )
+      })}
+    </HStack>
+  </Flex>
+)
 
-const MobileNavigation: React.FC<PagesBlocksNavigation> = ({ menuItems }) => {
+const MobileNavigation: React.FC<PagesBlocksNavigation> = ({ menuItems, rightMenuItems }) => {
   const disclosure = useDisclosure()
   const collapsibleDisclosure = useDisclosure()
   const buttonRef = useRef<HTMLButtonElement>(null)
-  const imageHeight = useBreakpointValue({ xs: 22, lg: 22 })
   return (
     <>
       <Flex justifyContent="space-between">
         <Flex alignItems="center">
-          <Image height={imageHeight || 0} width={imageHeight || 0} src={LOGO} alt="High Output Ventures" />
+          <Image height={LOGO_SIZE} width={LOGO_SIZE} src={LOGO} alt="High Output Ventures" />
         </Flex>
         <Box>
           <IconButton
+            size="sm"
             ref={buttonRef}
             onClick={disclosure.onToggle}
             variant="ghost"
@@ -88,7 +86,7 @@ const MobileNavigation: React.FC<PagesBlocksNavigation> = ({ menuItems }) => {
         header={
           <Flex justifyContent="space-between">
             <Flex alignItems="center">
-              <Image height={imageHeight || 0} width={imageHeight || 0} src={LOGO} alt="High Output Ventures" />
+              <Image height={LOGO_SIZE} width={LOGO_SIZE} src={LOGO} alt="High Output Ventures" />
             </Flex>
             <Box>
               <IconButton
@@ -130,6 +128,22 @@ const MobileNavigation: React.FC<PagesBlocksNavigation> = ({ menuItems }) => {
             ) : (
               <Button size="sm" variant="ghost" key={dynamicKey}>
                 {menuItem?.label}
+              </Button>
+            )
+          })}
+          {rightMenuItems?.map((rightMenuItem, idx) => {
+            const variant = rightMenuItem?.variant as ButtonProps['variant']
+            const isSolid = variant === 'solid'
+            return (
+              <Button
+                key={idx}
+                variant={variant}
+                size="sm"
+                {...(isSolid && {
+                  colorScheme: 'blue',
+                })}
+              >
+                {rightMenuItem?.label}
               </Button>
             )
           })}

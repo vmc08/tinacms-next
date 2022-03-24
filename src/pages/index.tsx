@@ -26,6 +26,11 @@ const query = `
                 link
               }
             }
+            rightMenuItems {
+              label
+              link
+              variant
+            }
           }
           ... on PagesBlocksHero {
             title
