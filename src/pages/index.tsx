@@ -18,6 +18,7 @@ const query = `
         blocks {
           __typename
           ... on PagesBlocksNavigation {
+            alignment
             menuItems {
               label
               link

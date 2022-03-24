@@ -1,0 +1,252 @@
+{
+  "version": {
+    "fullVersion": "0.59.7",
+    "major": "0",
+    "minor": "59",
+    "patch": "7"
+  },
+  "meta": {},
+  "collections": [
+    {
+      "label": "Pages",
+      "name": "pages",
+      "path": "contents/pages",
+      "fields": [
+        {
+          "type": "object",
+          "list": true,
+          "label": "Page Blocks",
+          "name": "blocks",
+          "templates": [
+            {
+              "name": "navigation",
+              "label": "Navigation",
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Menu Alignment",
+                  "name": "alignment",
+                  "options": ["left", "center", "right"],
+                  "namespace": ["pages", "blocks", "navigation", "alignment"]
+                },
+                {
+                  "type": "object",
+                  "label": "Main Menu",
+                  "name": "menuItems",
+                  "list": true,
+                  "fields": [
+                    {
+                      "type": "string",
+                      "label": "Label",
+                      "name": "label",
+                      "namespace": ["pages", "blocks", "navigation", "menuItems", "label"]
+                    },
+                    {
+                      "type": "string",
+                      "label": "Link",
+                      "name": "link",
+                      "namespace": ["pages", "blocks", "navigation", "menuItems", "link"]
+                    },
+                    {
+                      "type": "object",
+                      "label": "Sub Menu",
+                      "name": "subMenuItems",
+                      "list": true,
+                      "fields": [
+                        {
+                          "type": "string",
+                          "label": "Label",
+                          "name": "label",
+                          "namespace": ["pages", "blocks", "navigation", "menuItems", "subMenuItems", "label"]
+                        },
+                        {
+                          "type": "string",
+                          "label": "Link",
+                          "name": "link",
+                          "namespace": ["pages", "blocks", "navigation", "menuItems", "subMenuItems", "link"]
+                        }
+                      ],
+                      "namespace": ["pages", "blocks", "navigation", "menuItems", "subMenuItems"]
+                    }
+                  ],
+                  "namespace": ["pages", "blocks", "navigation", "menuItems"]
+                },
+                {
+                  "type": "object",
+                  "label": "Right Menu",
+                  "name": "rightMenuItems",
+                  "list": true,
+                  "fields": [
+                    {
+                      "type": "string",
+                      "label": "Label",
+                      "name": "label",
+                      "namespace": ["pages", "blocks", "navigation", "rightMenuItems", "label"]
+                    },
+                    {
+                      "type": "string",
+                      "label": "Link",
+                      "name": "link",
+                      "namespace": ["pages", "blocks", "navigation", "rightMenuItems", "link"]
+                    },
+                    {
+                      "type": "string",
+                      "label": "Variant",
+                      "name": "variant",
+                      "options": ["ghost", "link", "outline", "solid", "unstyled"],
+                      "namespace": ["pages", "blocks", "navigation", "rightMenuItems", "variant"]
+                    }
+                  ],
+                  "namespace": ["pages", "blocks", "navigation", "rightMenuItems"]
+                }
+              ],
+              "namespace": ["pages", "blocks", "navigation"]
+            },
+            {
+              "name": "hero",
+              "label": "Hero Block",
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Title",
+                  "name": "title",
+                  "namespace": ["pages", "blocks", "hero", "title"]
+                },
+                {
+                  "type": "string",
+                  "label": "Description",
+                  "name": "description",
+                  "namespace": ["pages", "blocks", "hero", "description"]
+                },
+                {
+                  "type": "image",
+                  "label": "Image",
+                  "name": "image",
+                  "namespace": ["pages", "blocks", "hero", "image"]
+                }
+              ],
+              "namespace": ["pages", "blocks", "hero"]
+            },
+            {
+              "name": "projects",
+              "label": "Projects",
+              "fields": [
+                {
+                  "type": "object",
+                  "label": "Project",
+                  "name": "projectItem",
+                  "list": true,
+                  "fields": [
+                    {
+                      "type": "string",
+                      "label": "Link",
+                      "name": "link",
+                      "namespace": ["pages", "blocks", "projects", "projectItem", "link"]
+                    },
+                    {
+                      "type": "image",
+                      "label": "Image",
+                      "name": "image",
+                      "namespace": ["pages", "blocks", "projects", "projectItem", "image"]
+                    }
+                  ],
+                  "namespace": ["pages", "blocks", "projects", "projectItem"]
+                }
+              ],
+              "namespace": ["pages", "blocks", "projects"]
+            },
+            {
+              "name": "vision",
+              "label": "Vision",
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Title",
+                  "name": "title",
+                  "namespace": ["pages", "blocks", "vision", "title"]
+                },
+                {
+                  "type": "string",
+                  "label": "Description",
+                  "name": "description",
+                  "ui": {
+                    "component": "textarea"
+                  },
+                  "namespace": ["pages", "blocks", "vision", "description"]
+                }
+              ],
+              "namespace": ["pages", "blocks", "vision"]
+            },
+            {
+              "name": "values",
+              "label": "Values",
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Title",
+                  "name": "title",
+                  "namespace": ["pages", "blocks", "values", "title"]
+                },
+                {
+                  "type": "object",
+                  "label": "Values",
+                  "name": "valueItems",
+                  "list": true,
+                  "fields": [
+                    {
+                      "type": "image",
+                      "label": "Image",
+                      "name": "image",
+                      "namespace": ["pages", "blocks", "values", "valueItems", "image"]
+                    },
+                    {
+                      "type": "string",
+                      "label": "Description",
+                      "name": "description",
+                      "ui": {
+                        "component": "textarea"
+                      },
+                      "namespace": ["pages", "blocks", "values", "valueItems", "description"]
+                    }
+                  ],
+                  "namespace": ["pages", "blocks", "values", "valueItems"]
+                }
+              ],
+              "namespace": ["pages", "blocks", "values"]
+            },
+            {
+              "name": "footer",
+              "label": "Footer",
+              "fields": [
+                {
+                  "type": "object",
+                  "label": "Menu",
+                  "name": "menuItems",
+                  "list": true,
+                  "fields": [
+                    {
+                      "type": "string",
+                      "label": "Label",
+                      "name": "label",
+                      "namespace": ["pages", "blocks", "footer", "menuItems", "label"]
+                    },
+                    {
+                      "type": "string",
+                      "label": "Link",
+                      "name": "link",
+                      "namespace": ["pages", "blocks", "footer", "menuItems", "link"]
+                    }
+                  ],
+                  "namespace": ["pages", "blocks", "footer", "menuItems"]
+                }
+              ],
+              "namespace": ["pages", "blocks", "footer"]
+            }
+          ],
+          "namespace": ["pages", "blocks"]
+        }
+      ],
+      "namespace": ["pages"]
+    }
+  ]
+}

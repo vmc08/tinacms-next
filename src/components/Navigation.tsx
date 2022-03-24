@@ -12,13 +12,23 @@ import { PagesBlocksNavigation } from '../../.tina/__generated__/types'
 const LOGO = '/logo.png'
 const LOGO_SIZE = 32 || 0
 
-const DesktopNavigation: React.FC<PagesBlocksNavigation> = ({ menuItems, rightMenuItems }) => (
-  <Flex justifyContent="space-between" d={{ xs: 'none', xl: 'flex' }}>
+const DesktopNavigation: React.FC<PagesBlocksNavigation> = ({ menuItems, rightMenuItems, alignment }) => {
+  const rightMenuItemsRef = useRef<HTMLDivElement>(null)
+  const isLeft = alignment === 'left'
+  const isRight = alignment === 'right'
+  const isCenter = alignment === 'center'
+  return (
     <Flex>
-      <Flex mr="8" flexShrink={0}>
+      <Flex flexShrink={0} {...(isRight && { flexGrow: 1 })}>
         <Image height={LOGO_SIZE} width={LOGO_SIZE} src={LOGO} alt="High Output Ventures" />
       </Flex>
-      <HStack spacing="2" height={8}>
+      <HStack
+        spacing="2"
+        height={8}
+        {...(isRight && { mr: 4 })}
+        {...(isLeft && { flexGrow: 1, ml: 8 })}
+        {...(isCenter && { flexGrow: 1, justifyContent: 'center', mr: `-${rightMenuItemsRef.current?.offsetWidth}px` })}
+      >
         {menuItems?.map((menuItem, idx) => {
           const hasChildren = menuItem?.subMenuItems?.length
           const dynamicKey = `${menuItem?.link}-${idx}`
@@ -37,27 +47,27 @@ const DesktopNavigation: React.FC<PagesBlocksNavigation> = ({ menuItems, rightMe
           )
         })}
       </HStack>
+      <HStack spacing={4} ref={rightMenuItemsRef}>
+        {rightMenuItems?.map((rightMenuItem, idx) => {
+          const variant = rightMenuItem?.variant as ButtonProps['variant']
+          const isSolid = variant === 'solid'
+          return (
+            <Button
+              key={idx}
+              variant={variant}
+              size="sm"
+              {...(isSolid && {
+                colorScheme: 'blue',
+              })}
+            >
+              {rightMenuItem?.label}
+            </Button>
+          )
+        })}
+      </HStack>
     </Flex>
-    <HStack spacing={4}>
-      {rightMenuItems?.map((rightMenuItem, idx) => {
-        const variant = rightMenuItem?.variant as ButtonProps['variant']
-        const isSolid = variant === 'solid'
-        return (
-          <Button
-            key={idx}
-            variant={variant}
-            size="sm"
-            {...(isSolid && {
-              colorScheme: 'blue',
-            })}
-          >
-            {rightMenuItem?.label}
-          </Button>
-        )
-      })}
-    </HStack>
-  </Flex>
-)
+  )
+}
 
 const MobileNavigation: React.FC<PagesBlocksNavigation> = ({ menuItems, rightMenuItems }) => {
   const disclosure = useDisclosure()

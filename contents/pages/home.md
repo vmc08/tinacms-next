@@ -1,6 +1,7 @@
 ---
 blocks:
-  - menuItems:
+  - alignment: center
+    menuItems:
       - label: Home
         link: /
       - label: Pricing
@@ -14,6 +15,9 @@ blocks:
       - label: Contact
         link: /contact
     rightMenuItems:
+      - label: Guide
+        link: /guide
+        variant: outline
       - label: Login
         link: /login
         variant: outline

@@ -2,6 +2,7 @@ fragment PagesParts on Pages {
   blocks {
     __typename
     ... on PagesBlocksNavigation {
+      alignment
       menuItems {
         __typename
         label

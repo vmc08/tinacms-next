@@ -95,6 +95,7 @@ type PagesBlocksNavigationRightMenuItems {
 }
 
 type PagesBlocksNavigation {
+  alignment: String
   menuItems: [PagesBlocksNavigationMenuItems]
   rightMenuItems: [PagesBlocksNavigationRightMenuItems]
 }
@@ -194,6 +195,7 @@ input PagesBlocksNavigationRightMenuItemsMutation {
 }
 
 input PagesBlocksNavigationMutation {
+  alignment: String
   menuItems: [PagesBlocksNavigationMenuItemsMutation]
   rightMenuItems: [PagesBlocksNavigationRightMenuItemsMutation]
 }

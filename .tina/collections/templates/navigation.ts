@@ -5,6 +5,12 @@ const navigation: TinaTemplate = {
   label: 'Navigation',
   fields: [
     {
+      type: 'string',
+      label: 'Menu Alignment',
+      name: 'alignment',
+      options: ['left', 'center', 'right'],
+    },
+    {
       type: 'object',
       label: 'Main Menu',
       name: 'menuItems',
