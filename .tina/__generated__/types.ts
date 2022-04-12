@@ -213,6 +213,21 @@ export type PagesBlocksHeroV3 = {
   actionButtons?: Maybe<Array<Maybe<PagesBlocksHeroV3ActionButtons>>>
 }
 
+export type PagesBlocksFeaturesV1Features = {
+  __typename?: 'PagesBlocksFeaturesV1Features'
+  imageIcon?: Maybe<Scalars['String']>
+  title?: Maybe<Scalars['String']>
+  description?: Maybe<Scalars['String']>
+}
+
+export type PagesBlocksFeaturesV1 = {
+  __typename?: 'PagesBlocksFeaturesV1'
+  title?: Maybe<Scalars['String']>
+  subtitle?: Maybe<Scalars['String']>
+  description?: Maybe<Scalars['String']>
+  features?: Maybe<Array<Maybe<PagesBlocksFeaturesV1Features>>>
+}
+
 export type PagesBlocksProjectsProjectItem = {
   __typename?: 'PagesBlocksProjectsProjectItem'
   link?: Maybe<Scalars['String']>
@@ -258,6 +273,7 @@ export type PagesBlocks =
   | PagesBlocksHeroV1
   | PagesBlocksHeroV2
   | PagesBlocksHeroV3
+  | PagesBlocksFeaturesV1
   | PagesBlocksProjects
   | PagesBlocksVision
   | PagesBlocksValues
@@ -399,6 +415,19 @@ export type PagesBlocksHeroV3Mutation = {
   actionButtons?: InputMaybe<Array<InputMaybe<PagesBlocksHeroV3ActionButtonsMutation>>>
 }
 
+export type PagesBlocksFeaturesV1FeaturesMutation = {
+  imageIcon?: InputMaybe<Scalars['String']>
+  title?: InputMaybe<Scalars['String']>
+  description?: InputMaybe<Scalars['String']>
+}
+
+export type PagesBlocksFeaturesV1Mutation = {
+  title?: InputMaybe<Scalars['String']>
+  subtitle?: InputMaybe<Scalars['String']>
+  description?: InputMaybe<Scalars['String']>
+  features?: InputMaybe<Array<InputMaybe<PagesBlocksFeaturesV1FeaturesMutation>>>
+}
+
 export type PagesBlocksProjectsProjectItemMutation = {
   link?: InputMaybe<Scalars['String']>
   image?: InputMaybe<Scalars['String']>
@@ -437,6 +466,7 @@ export type PagesBlocksMutation = {
   heroV1?: InputMaybe<PagesBlocksHeroV1Mutation>
   heroV2?: InputMaybe<PagesBlocksHeroV2Mutation>
   heroV3?: InputMaybe<PagesBlocksHeroV3Mutation>
+  featuresV1?: InputMaybe<PagesBlocksFeaturesV1Mutation>
   projects?: InputMaybe<PagesBlocksProjectsMutation>
   vision?: InputMaybe<PagesBlocksVisionMutation>
   values?: InputMaybe<PagesBlocksValuesMutation>
@@ -503,6 +533,18 @@ export type PagesPartsFragment = {
           label?: string | null
           link?: string | null
           variant?: string | null
+        } | null> | null
+      }
+    | {
+        __typename: 'PagesBlocksFeaturesV1'
+        title?: string | null
+        subtitle?: string | null
+        description?: string | null
+        features?: Array<{
+          __typename: 'PagesBlocksFeaturesV1Features'
+          imageIcon?: string | null
+          title?: string | null
+          description?: string | null
         } | null> | null
       }
     | {
@@ -609,6 +651,18 @@ export type GetPagesDocumentQuery = {
               label?: string | null
               link?: string | null
               variant?: string | null
+            } | null> | null
+          }
+        | {
+            __typename: 'PagesBlocksFeaturesV1'
+            title?: string | null
+            subtitle?: string | null
+            description?: string | null
+            features?: Array<{
+              __typename: 'PagesBlocksFeaturesV1Features'
+              imageIcon?: string | null
+              title?: string | null
+              description?: string | null
             } | null> | null
           }
         | {
@@ -723,6 +777,18 @@ export type GetPagesListQuery = {
                 } | null> | null
               }
             | {
+                __typename: 'PagesBlocksFeaturesV1'
+                title?: string | null
+                subtitle?: string | null
+                description?: string | null
+                features?: Array<{
+                  __typename: 'PagesBlocksFeaturesV1Features'
+                  imageIcon?: string | null
+                  title?: string | null
+                  description?: string | null
+                } | null> | null
+              }
+            | {
                 __typename: 'PagesBlocksProjects'
                 projectItem?: Array<{
                   __typename: 'PagesBlocksProjectsProjectItem'
@@ -813,6 +879,17 @@ export const PagesPartsFragmentDoc = gql`
           label
           link
           variant
+        }
+      }
+      ... on PagesBlocksFeaturesV1 {
+        title
+        subtitle
+        description
+        features {
+          __typename
+          imageIcon
+          title
+          description
         }
       }
       ... on PagesBlocksProjects {

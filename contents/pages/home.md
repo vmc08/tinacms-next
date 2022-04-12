@@ -54,6 +54,41 @@ blocks:
       - label: Live Demo
         variant: outline
     _template: heroV3
+  - title: Transactions
+    subtitle: A better way to send money
+    description: >-
+      Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
+      voluptatum cupiditate veritatis in accusamus quisquam.
+    features:
+      - imageIcon: >-
+          https://res.cloudinary.com/vmc08/image/upload/v1649778989/icon-1_wrtgur.png
+        title: Competitive exchange rates
+        description: >-
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+          impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
+          ratione.
+      - imageIcon: >-
+          https://res.cloudinary.com/vmc08/image/upload/v1649778993/icon-2_nihwzm.png
+        title: No hidden fees
+        description: >-
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+          impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
+          ratione.
+      - imageIcon: >-
+          https://res.cloudinary.com/vmc08/image/upload/v1649778996/icon-3_xxl2ee.png
+        title: Transfers are instant
+        description: >-
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+          impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
+          ratione.
+      - imageIcon: >-
+          https://res.cloudinary.com/vmc08/image/upload/v1649779000/icon-4_rspisj.png
+        title: Mobile notifications
+        description: >-
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+          impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
+          ratione.
+    _template: featuresV1
   - title: This will be another block
     valueItems:
       - image: >-

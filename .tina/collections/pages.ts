@@ -8,6 +8,7 @@ import projects from './templates/projects'
 import vision from './templates/vision'
 import values from './templates/values'
 import footer from './templates/footer'
+import featuresV1 from './templates/featuresV1'
 
 const pages: TinaCloudCollection = {
   label: 'Pages',
@@ -19,7 +20,7 @@ const pages: TinaCloudCollection = {
       list: true,
       label: 'Page Blocks',
       name: 'blocks',
-      templates: [navigation, heroV1, heroV2, heroV3, projects, vision, values, footer],
+      templates: [navigation, heroV1, heroV2, heroV3, featuresV1, projects, vision, values, footer],
     },
   ],
 }

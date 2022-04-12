@@ -56,6 +56,17 @@ fragment PagesParts on Pages {
         variant
       }
     }
+    ... on PagesBlocksFeaturesV1 {
+      title
+      subtitle
+      description
+      features {
+        __typename
+        imageIcon
+        title
+        description
+      }
+    }
     ... on PagesBlocksProjects {
       projectItem {
         __typename

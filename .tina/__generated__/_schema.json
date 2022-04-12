@@ -267,6 +267,58 @@
               "namespace": ["pages", "blocks", "heroV3"]
             },
             {
+              "name": "featuresV1",
+              "label": "Features v1",
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Title",
+                  "name": "title",
+                  "namespace": ["pages", "blocks", "featuresV1", "title"]
+                },
+                {
+                  "type": "string",
+                  "label": "Sub Title",
+                  "name": "subtitle",
+                  "namespace": ["pages", "blocks", "featuresV1", "subtitle"]
+                },
+                {
+                  "type": "string",
+                  "label": "Description",
+                  "name": "description",
+                  "namespace": ["pages", "blocks", "featuresV1", "description"]
+                },
+                {
+                  "type": "object",
+                  "label": "Features",
+                  "name": "features",
+                  "list": true,
+                  "fields": [
+                    {
+                      "type": "image",
+                      "label": "Icon",
+                      "name": "imageIcon",
+                      "namespace": ["pages", "blocks", "featuresV1", "features", "imageIcon"]
+                    },
+                    {
+                      "type": "string",
+                      "label": "Title",
+                      "name": "title",
+                      "namespace": ["pages", "blocks", "featuresV1", "features", "title"]
+                    },
+                    {
+                      "type": "string",
+                      "label": "Description",
+                      "name": "description",
+                      "namespace": ["pages", "blocks", "featuresV1", "features", "description"]
+                    }
+                  ],
+                  "namespace": ["pages", "blocks", "featuresV1", "features"]
+                }
+              ],
+              "namespace": ["pages", "blocks", "featuresV1"]
+            },
+            {
               "name": "projects",
               "label": "Projects",
               "fields": [

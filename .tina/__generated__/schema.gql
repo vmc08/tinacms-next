@@ -143,6 +143,19 @@ type PagesBlocksHeroV3 {
   actionButtons: [PagesBlocksHeroV3ActionButtons]
 }
 
+type PagesBlocksFeaturesV1Features {
+  imageIcon: String
+  title: String
+  description: String
+}
+
+type PagesBlocksFeaturesV1 {
+  title: String
+  subtitle: String
+  description: String
+  features: [PagesBlocksFeaturesV1Features]
+}
+
 type PagesBlocksProjectsProjectItem {
   link: String
   image: String
@@ -176,7 +189,7 @@ type PagesBlocksFooter {
   menuItems: [PagesBlocksFooterMenuItems]
 }
 
-union PagesBlocks = PagesBlocksNavigation | PagesBlocksHeroV1 | PagesBlocksHeroV2 | PagesBlocksHeroV3 | PagesBlocksProjects | PagesBlocksVision | PagesBlocksValues | PagesBlocksFooter
+union PagesBlocks = PagesBlocksNavigation | PagesBlocksHeroV1 | PagesBlocksHeroV2 | PagesBlocksHeroV3 | PagesBlocksFeaturesV1 | PagesBlocksProjects | PagesBlocksVision | PagesBlocksValues | PagesBlocksFooter
 
 type Pages {
   blocks: [PagesBlocks]
@@ -280,6 +293,19 @@ input PagesBlocksHeroV3Mutation {
   actionButtons: [PagesBlocksHeroV3ActionButtonsMutation]
 }
 
+input PagesBlocksFeaturesV1FeaturesMutation {
+  imageIcon: String
+  title: String
+  description: String
+}
+
+input PagesBlocksFeaturesV1Mutation {
+  title: String
+  subtitle: String
+  description: String
+  features: [PagesBlocksFeaturesV1FeaturesMutation]
+}
+
 input PagesBlocksProjectsProjectItemMutation {
   link: String
   image: String
@@ -318,6 +344,7 @@ input PagesBlocksMutation {
   heroV1: PagesBlocksHeroV1Mutation
   heroV2: PagesBlocksHeroV2Mutation
   heroV3: PagesBlocksHeroV3Mutation
+  featuresV1: PagesBlocksFeaturesV1Mutation
   projects: PagesBlocksProjectsMutation
   vision: PagesBlocksVisionMutation
   values: PagesBlocksValuesMutation
