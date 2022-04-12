@@ -5,7 +5,7 @@ import { useTina } from 'tinacms/dist/edit-state'
 import { Query } from '../../.tina/__generated__/types'
 
 import Navigation from '@blocks/Navigation'
-import HeroBanner from '@blocks/Hero'
+import { HeroV2, HeroV3 } from '@blocks/Hero'
 import Projects from '@blocks/Projects'
 import Vision from '@blocks/Vision'
 import Values from '@blocks/Values'
@@ -33,10 +33,24 @@ const query = `
               variant
             }
           }
-          ... on PagesBlocksHero {
+          ... on PagesBlocksHeroV2 {
             title
             description
-            image
+            background
+            button {
+              label
+              link
+            }
+          }
+          ...on PagesBlocksHeroV3 {
+            title
+            description
+            background
+            actionButtons {
+              link
+              label
+              variant
+            }
           }
           ... on PagesBlocksProjects {
             projectItem {
@@ -91,20 +105,21 @@ const Index: React.FC<{ data: Query }> = (props) => {
   return data?.getPagesDocument ? (
     <>
       {(data.getPagesDocument.data.blocks || []).map((block, idx) => {
-        const dynamicKey = `${block?.__typename}-${idx}`
         switch (block?.__typename) {
           case 'PagesBlocksNavigation':
-            return <Navigation key={dynamicKey} {...block} />
-          case 'PagesBlocksHero':
-            return <HeroBanner key={dynamicKey} {...block} />
+            return <Navigation key={idx} {...block} />
+          case 'PagesBlocksHeroV2':
+            return <HeroV2 key={idx} {...block} />
+          case 'PagesBlocksHeroV3':
+            return <HeroV3 key={idx} {...block} />
           case 'PagesBlocksProjects':
-            return <Projects key={dynamicKey} {...block} />
+            return <Projects key={idx} {...block} />
           case 'PagesBlocksVision':
-            return <Vision key={dynamicKey} {...block} />
+            return <Vision key={idx} {...block} />
           case 'PagesBlocksValues':
-            return <Values key={dynamicKey} {...block} />
+            return <Values key={idx} {...block} />
           case 'PagesBlocksFooter':
-            return <Footer key={dynamicKey} {...block} />
+            return <Footer key={idx} {...block} />
           default:
             return null
         }

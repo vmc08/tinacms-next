@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import React, { useRef } from 'react'
 import { Box, Flex, HStack, Icon, IconButton, useDisclosure, VStack, Collapse, ButtonProps } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@heroicons/react/outline'
 import { MenuAlt3Icon, XIcon } from '@heroicons/react/solid'
@@ -31,17 +31,16 @@ const DesktopNavigation: React.FC<PagesBlocksNavigation> = ({ menuItems, rightMe
       >
         {menuItems?.map((menuItem, idx) => {
           const hasChildren = menuItem?.subMenuItems?.length
-          const dynamicKey = `${menuItem?.link}-${idx}`
           return hasChildren ? (
             <Menu
-              key={dynamicKey}
+              key={idx}
               label={menuItem?.label}
               subMenuItems={menuItem.subMenuItems}
               menuSize="sm"
               buttonSize="sm"
             />
           ) : (
-            <Button size="sm" variant="ghost" key={dynamicKey}>
+            <Button size="sm" variant="ghost" key={idx}>
               {menuItem?.label}
             </Button>
           )
@@ -113,14 +112,12 @@ const MobileNavigation: React.FC<PagesBlocksNavigation> = ({ menuItems, rightMen
         <VStack spacing={4}>
           {menuItems?.map((menuItem, idx) => {
             const hasChildren = menuItem?.subMenuItems?.length
-            const dynamicKey = `${menuItem?.link}-${idx}`
             return hasChildren ? (
-              <>
+              <React.Fragment key={idx}>
                 <Button
                   size="sm"
                   variant="ghost"
                   rightIcon={<Icon as={ChevronDownIcon} />}
-                  key={dynamicKey}
                   onClick={collapsibleDisclosure.onToggle}
                 >
                   {menuItem?.label}
@@ -128,15 +125,15 @@ const MobileNavigation: React.FC<PagesBlocksNavigation> = ({ menuItems, rightMen
                 <Collapse in={collapsibleDisclosure.isOpen} animateOpacity>
                   <VStack spacing={4}>
                     {menuItem?.subMenuItems?.map((subMenu, innerIdx) => (
-                      <Button size="sm" variant="ghost" key={`${subMenu?.link}-${innerIdx}`} opacity={0.75}>
+                      <Button size="sm" variant="ghost" key={`${idx}-${innerIdx}`} opacity={0.75}>
                         {subMenu?.label}
                       </Button>
                     ))}
                   </VStack>
                 </Collapse>
-              </>
+              </React.Fragment>
             ) : (
-              <Button size="sm" variant="ghost" key={dynamicKey}>
+              <Button size="sm" variant="ghost" key={idx}>
                 {menuItem?.label}
               </Button>
             )

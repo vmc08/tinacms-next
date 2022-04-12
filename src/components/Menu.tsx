@@ -33,8 +33,8 @@ const Menu: React.FC<MenuProps> = ({ label, subMenuItems, menuSize, buttonSize }
           {label}
         </MenuButton>
         <MenuList>
-          {subMenuItems?.map((subMenu, key) => (
-            <MenuItem key={key}>{subMenu?.label}</MenuItem>
+          {subMenuItems?.map((subMenu, idx) => (
+            <MenuItem key={idx}>{subMenu?.label}</MenuItem>
           ))}
         </MenuList>
       </>

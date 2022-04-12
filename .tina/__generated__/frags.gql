@@ -20,10 +20,26 @@ fragment PagesParts on Pages {
         variant
       }
     }
-    ... on PagesBlocksHero {
+    ... on PagesBlocksHeroV2 {
       title
       description
-      image
+      background
+      button {
+        __typename
+        label
+        link
+      }
+    }
+    ... on PagesBlocksHeroV3 {
+      title
+      description
+      background
+      actionButtons {
+        __typename
+        label
+        link
+        variant
+      }
     }
     ... on PagesBlocksProjects {
       projectItem {

@@ -72,6 +72,7 @@
     "eslint-plugin-react": "^7.29.2",
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
+    "inquirer": "^8.2.2",
     "lint-staged": "^12.3.4",
     "npm-check-updates": "^12.5.0",
     "prettier": "^2.5.1",

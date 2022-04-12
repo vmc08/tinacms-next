@@ -100,10 +100,29 @@ type PagesBlocksNavigation {
   rightMenuItems: [PagesBlocksNavigationRightMenuItems]
 }
 
-type PagesBlocksHero {
+type PagesBlocksHeroV2Button {
+  label: String
+  link: String
+}
+
+type PagesBlocksHeroV2 {
   title: String
   description: String
-  image: String
+  background: String
+  button: PagesBlocksHeroV2Button
+}
+
+type PagesBlocksHeroV3ActionButtons {
+  label: String
+  link: String
+  variant: String
+}
+
+type PagesBlocksHeroV3 {
+  title: String
+  description: String
+  background: String
+  actionButtons: [PagesBlocksHeroV3ActionButtons]
 }
 
 type PagesBlocksProjectsProjectItem {
@@ -139,7 +158,7 @@ type PagesBlocksFooter {
   menuItems: [PagesBlocksFooterMenuItems]
 }
 
-union PagesBlocks = PagesBlocksNavigation | PagesBlocksHero | PagesBlocksProjects | PagesBlocksVision | PagesBlocksValues | PagesBlocksFooter
+union PagesBlocks = PagesBlocksNavigation | PagesBlocksHeroV2 | PagesBlocksHeroV3 | PagesBlocksProjects | PagesBlocksVision | PagesBlocksValues | PagesBlocksFooter
 
 type Pages {
   blocks: [PagesBlocks]
@@ -200,10 +219,29 @@ input PagesBlocksNavigationMutation {
   rightMenuItems: [PagesBlocksNavigationRightMenuItemsMutation]
 }
 
-input PagesBlocksHeroMutation {
+input PagesBlocksHeroV2ButtonMutation {
+  label: String
+  link: String
+}
+
+input PagesBlocksHeroV2Mutation {
   title: String
   description: String
-  image: String
+  background: String
+  button: PagesBlocksHeroV2ButtonMutation
+}
+
+input PagesBlocksHeroV3ActionButtonsMutation {
+  label: String
+  link: String
+  variant: String
+}
+
+input PagesBlocksHeroV3Mutation {
+  title: String
+  description: String
+  background: String
+  actionButtons: [PagesBlocksHeroV3ActionButtonsMutation]
 }
 
 input PagesBlocksProjectsProjectItemMutation {
@@ -241,7 +279,8 @@ input PagesBlocksFooterMutation {
 
 input PagesBlocksMutation {
   navigation: PagesBlocksNavigationMutation
-  hero: PagesBlocksHeroMutation
+  heroV2: PagesBlocksHeroV2Mutation
+  heroV3: PagesBlocksHeroV3Mutation
   projects: PagesBlocksProjectsMutation
   vision: PagesBlocksVisionMutation
   values: PagesBlocksValuesMutation

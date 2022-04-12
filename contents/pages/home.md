@@ -25,13 +25,23 @@ blocks:
         link: /sign-up
         variant: solid
     _template: navigation
-  - title: This is hero
+  - title: Let your curiosity do the booking
+    description: Inspiration for your next trip
+    background: >-
+      https://res.cloudinary.com/vmc08/image/upload/v1648187694/hero-img_yi2grd.png
+    button:
+      label: Explore destinations
+    _template: heroV2
+  - title: Get help with coding from engineers
     description: >-
-      Tina is an open-source, Git-backed CMS with the ability to add visual
-      editing to your NextJS site
-    image: >-
-      https://res.cloudinary.com/vmc08/image/upload/v1647244161/flyingTina_isq2gz.png
-    _template: hero
+      Learn how to code efficiently and create apps and games that work. Consult
+      with best epxerts to apply skills in action.
+    actionButtons:
+      - label: Sign up
+        variant: solid
+      - label: Live Demo
+        variant: outline
+    _template: heroV3
   - title: This will be another block
     valueItems:
       - image: >-

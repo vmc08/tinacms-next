@@ -163,11 +163,33 @@ export type PagesBlocksNavigation = {
   rightMenuItems?: Maybe<Array<Maybe<PagesBlocksNavigationRightMenuItems>>>
 }
 
-export type PagesBlocksHero = {
-  __typename?: 'PagesBlocksHero'
+export type PagesBlocksHeroV2Button = {
+  __typename?: 'PagesBlocksHeroV2Button'
+  label?: Maybe<Scalars['String']>
+  link?: Maybe<Scalars['String']>
+}
+
+export type PagesBlocksHeroV2 = {
+  __typename?: 'PagesBlocksHeroV2'
   title?: Maybe<Scalars['String']>
   description?: Maybe<Scalars['String']>
-  image?: Maybe<Scalars['String']>
+  background?: Maybe<Scalars['String']>
+  button?: Maybe<PagesBlocksHeroV2Button>
+}
+
+export type PagesBlocksHeroV3ActionButtons = {
+  __typename?: 'PagesBlocksHeroV3ActionButtons'
+  label?: Maybe<Scalars['String']>
+  link?: Maybe<Scalars['String']>
+  variant?: Maybe<Scalars['String']>
+}
+
+export type PagesBlocksHeroV3 = {
+  __typename?: 'PagesBlocksHeroV3'
+  title?: Maybe<Scalars['String']>
+  description?: Maybe<Scalars['String']>
+  background?: Maybe<Scalars['String']>
+  actionButtons?: Maybe<Array<Maybe<PagesBlocksHeroV3ActionButtons>>>
 }
 
 export type PagesBlocksProjectsProjectItem = {
@@ -212,7 +234,8 @@ export type PagesBlocksFooter = {
 
 export type PagesBlocks =
   | PagesBlocksNavigation
-  | PagesBlocksHero
+  | PagesBlocksHeroV2
+  | PagesBlocksHeroV3
   | PagesBlocksProjects
   | PagesBlocksVision
   | PagesBlocksValues
@@ -311,10 +334,29 @@ export type PagesBlocksNavigationMutation = {
   rightMenuItems?: InputMaybe<Array<InputMaybe<PagesBlocksNavigationRightMenuItemsMutation>>>
 }
 
-export type PagesBlocksHeroMutation = {
+export type PagesBlocksHeroV2ButtonMutation = {
+  label?: InputMaybe<Scalars['String']>
+  link?: InputMaybe<Scalars['String']>
+}
+
+export type PagesBlocksHeroV2Mutation = {
   title?: InputMaybe<Scalars['String']>
   description?: InputMaybe<Scalars['String']>
-  image?: InputMaybe<Scalars['String']>
+  background?: InputMaybe<Scalars['String']>
+  button?: InputMaybe<PagesBlocksHeroV2ButtonMutation>
+}
+
+export type PagesBlocksHeroV3ActionButtonsMutation = {
+  label?: InputMaybe<Scalars['String']>
+  link?: InputMaybe<Scalars['String']>
+  variant?: InputMaybe<Scalars['String']>
+}
+
+export type PagesBlocksHeroV3Mutation = {
+  title?: InputMaybe<Scalars['String']>
+  description?: InputMaybe<Scalars['String']>
+  background?: InputMaybe<Scalars['String']>
+  actionButtons?: InputMaybe<Array<InputMaybe<PagesBlocksHeroV3ActionButtonsMutation>>>
 }
 
 export type PagesBlocksProjectsProjectItemMutation = {
@@ -352,7 +394,8 @@ export type PagesBlocksFooterMutation = {
 
 export type PagesBlocksMutation = {
   navigation?: InputMaybe<PagesBlocksNavigationMutation>
-  hero?: InputMaybe<PagesBlocksHeroMutation>
+  heroV2?: InputMaybe<PagesBlocksHeroV2Mutation>
+  heroV3?: InputMaybe<PagesBlocksHeroV3Mutation>
   projects?: InputMaybe<PagesBlocksProjectsMutation>
   vision?: InputMaybe<PagesBlocksVisionMutation>
   values?: InputMaybe<PagesBlocksValuesMutation>
@@ -386,7 +429,25 @@ export type PagesPartsFragment = {
           variant?: string | null
         } | null> | null
       }
-    | { __typename: 'PagesBlocksHero'; title?: string | null; description?: string | null; image?: string | null }
+    | {
+        __typename: 'PagesBlocksHeroV2'
+        title?: string | null
+        description?: string | null
+        background?: string | null
+        button?: { __typename: 'PagesBlocksHeroV2Button'; label?: string | null; link?: string | null } | null
+      }
+    | {
+        __typename: 'PagesBlocksHeroV3'
+        title?: string | null
+        description?: string | null
+        background?: string | null
+        actionButtons?: Array<{
+          __typename: 'PagesBlocksHeroV3ActionButtons'
+          label?: string | null
+          link?: string | null
+          variant?: string | null
+        } | null> | null
+      }
     | {
         __typename: 'PagesBlocksProjects'
         projectItem?: Array<{
@@ -458,7 +519,25 @@ export type GetPagesDocumentQuery = {
               variant?: string | null
             } | null> | null
           }
-        | { __typename: 'PagesBlocksHero'; title?: string | null; description?: string | null; image?: string | null }
+        | {
+            __typename: 'PagesBlocksHeroV2'
+            title?: string | null
+            description?: string | null
+            background?: string | null
+            button?: { __typename: 'PagesBlocksHeroV2Button'; label?: string | null; link?: string | null } | null
+          }
+        | {
+            __typename: 'PagesBlocksHeroV3'
+            title?: string | null
+            description?: string | null
+            background?: string | null
+            actionButtons?: Array<{
+              __typename: 'PagesBlocksHeroV3ActionButtons'
+              label?: string | null
+              link?: string | null
+              variant?: string | null
+            } | null> | null
+          }
         | {
             __typename: 'PagesBlocksProjects'
             projectItem?: Array<{
@@ -536,10 +615,23 @@ export type GetPagesListQuery = {
                 } | null> | null
               }
             | {
-                __typename: 'PagesBlocksHero'
+                __typename: 'PagesBlocksHeroV2'
                 title?: string | null
                 description?: string | null
-                image?: string | null
+                background?: string | null
+                button?: { __typename: 'PagesBlocksHeroV2Button'; label?: string | null; link?: string | null } | null
+              }
+            | {
+                __typename: 'PagesBlocksHeroV3'
+                title?: string | null
+                description?: string | null
+                background?: string | null
+                actionButtons?: Array<{
+                  __typename: 'PagesBlocksHeroV3ActionButtons'
+                  label?: string | null
+                  link?: string | null
+                  variant?: string | null
+                } | null> | null
               }
             | {
                 __typename: 'PagesBlocksProjects'
@@ -598,10 +690,26 @@ export const PagesPartsFragmentDoc = gql`
           variant
         }
       }
-      ... on PagesBlocksHero {
+      ... on PagesBlocksHeroV2 {
         title
         description
-        image
+        background
+        button {
+          __typename
+          label
+          link
+        }
+      }
+      ... on PagesBlocksHeroV3 {
+        title
+        description
+        background
+        actionButtons {
+          __typename
+          label
+          link
+          variant
+        }
       }
       ... on PagesBlocksProjects {
         projectItem {

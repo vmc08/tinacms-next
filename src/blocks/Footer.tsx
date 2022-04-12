@@ -11,8 +11,8 @@ const Footer: React.FC<PagesBlocksFooter> = ({ menuItems }) => {
         <Flex justifyContent="space-between" d={{ xs: 'none', xl: 'flex' }}>
           <Flex>
             <HStack spacing="2">
-              {menuItems?.map((menuItem) => (
-                <Button size="md" variant="ghost" key={menuItem?.link}>
+              {menuItems?.map((menuItem, idx) => (
+                <Button size="md" variant="ghost" key={idx}>
                   {menuItem?.label}
                 </Button>
               ))}
