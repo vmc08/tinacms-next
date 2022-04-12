@@ -67,6 +67,23 @@ fragment PagesParts on Pages {
         description
       }
     }
+    ... on PagesBlocksFeaturesV2 {
+      title
+      description
+      features {
+        __typename
+        title
+        description
+      }
+    }
+    ... on PagesBlocksFeaturesV3 {
+      features {
+        __typename
+        imageIcon
+        title
+        description
+      }
+    }
     ... on PagesBlocksProjects {
       projectItem {
         __typename

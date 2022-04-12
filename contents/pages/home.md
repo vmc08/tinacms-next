@@ -89,6 +89,67 @@ blocks:
           impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
           ratione.
     _template: featuresV1
+  - title: All-in-one platform
+    description: >-
+      Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada
+      adipiscing sagittis vel nulla nec.
+    features:
+      - title: Invite team members
+        description: >-
+          Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est,
+          molestie blandit quis ac. Lacus.
+      - title: Notifications
+        description: >-
+          Ornare donec rhoncus vitae nisl velit, neque, mauris dictum duis. Nibh
+          urna non parturient.
+      - title: List view
+        description: >-
+          Etiam cras augue ornare pretium sit malesuada morbi orci, venenatis.
+          Dictum lacus.
+      - title: Boards
+        description: >-
+          Interdum quam pulvinar turpis tortor, egestas quis diam amet, natoque.
+          Mauris sagittis.
+      - title: Keyboard shortcuts
+        description: >-
+          Ullamcorper in ipsum ac feugiat. Senectus at aliquam vulputate mollis
+          nec. In at risus odio.
+      - title: Reporting
+        description: >-
+          Magna a vel sagittis aliquam eu amet. Et lorem auctor quam nunc odio.
+          Sed bibendum.
+      - title: Calendars
+        description: >-
+          Sed mi, dapibus turpis orci posuere integer. A porta viverra posuere
+          adipiscing turpis.
+      - title: Mobile app
+        description: >-
+          Quisque sapien nunc nisl eros. Facilisis sagittis maecenas id
+          dignissim tristique proin sed.
+    _template: featuresV2
+  - features:
+      - imageIcon: >-
+          https://res.cloudinary.com/vmc08/image/upload/v1649778989/icon-1_wrtgur.png
+        title: Competitive exchange rates
+        description: >-
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+          impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
+          ratione.
+      - imageIcon: >-
+          https://res.cloudinary.com/vmc08/image/upload/v1649778993/icon-2_nihwzm.png
+        title: No hidden fees
+        description: >-
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+          impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
+          ratione.
+      - imageIcon: >-
+          https://res.cloudinary.com/vmc08/image/upload/v1649778996/icon-3_xxl2ee.png
+        title: Transfers are instant
+        description: >-
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+          impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
+          ratione.
+    _template: featuresV3
   - title: This will be another block
     valueItems:
       - image: >-

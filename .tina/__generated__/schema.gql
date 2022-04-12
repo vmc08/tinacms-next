@@ -156,6 +156,27 @@ type PagesBlocksFeaturesV1 {
   features: [PagesBlocksFeaturesV1Features]
 }
 
+type PagesBlocksFeaturesV2Features {
+  title: String
+  description: String
+}
+
+type PagesBlocksFeaturesV2 {
+  title: String
+  description: String
+  features: [PagesBlocksFeaturesV2Features]
+}
+
+type PagesBlocksFeaturesV3Features {
+  imageIcon: String
+  title: String
+  description: String
+}
+
+type PagesBlocksFeaturesV3 {
+  features: [PagesBlocksFeaturesV3Features]
+}
+
 type PagesBlocksProjectsProjectItem {
   link: String
   image: String
@@ -189,7 +210,7 @@ type PagesBlocksFooter {
   menuItems: [PagesBlocksFooterMenuItems]
 }
 
-union PagesBlocks = PagesBlocksNavigation | PagesBlocksHeroV1 | PagesBlocksHeroV2 | PagesBlocksHeroV3 | PagesBlocksFeaturesV1 | PagesBlocksProjects | PagesBlocksVision | PagesBlocksValues | PagesBlocksFooter
+union PagesBlocks = PagesBlocksNavigation | PagesBlocksHeroV1 | PagesBlocksHeroV2 | PagesBlocksHeroV3 | PagesBlocksFeaturesV1 | PagesBlocksFeaturesV2 | PagesBlocksFeaturesV3 | PagesBlocksProjects | PagesBlocksVision | PagesBlocksValues | PagesBlocksFooter
 
 type Pages {
   blocks: [PagesBlocks]
@@ -306,6 +327,27 @@ input PagesBlocksFeaturesV1Mutation {
   features: [PagesBlocksFeaturesV1FeaturesMutation]
 }
 
+input PagesBlocksFeaturesV2FeaturesMutation {
+  title: String
+  description: String
+}
+
+input PagesBlocksFeaturesV2Mutation {
+  title: String
+  description: String
+  features: [PagesBlocksFeaturesV2FeaturesMutation]
+}
+
+input PagesBlocksFeaturesV3FeaturesMutation {
+  imageIcon: String
+  title: String
+  description: String
+}
+
+input PagesBlocksFeaturesV3Mutation {
+  features: [PagesBlocksFeaturesV3FeaturesMutation]
+}
+
 input PagesBlocksProjectsProjectItemMutation {
   link: String
   image: String
@@ -345,6 +387,8 @@ input PagesBlocksMutation {
   heroV2: PagesBlocksHeroV2Mutation
   heroV3: PagesBlocksHeroV3Mutation
   featuresV1: PagesBlocksFeaturesV1Mutation
+  featuresV2: PagesBlocksFeaturesV2Mutation
+  featuresV3: PagesBlocksFeaturesV3Mutation
   projects: PagesBlocksProjectsMutation
   vision: PagesBlocksVisionMutation
   values: PagesBlocksValuesMutation

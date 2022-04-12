@@ -2,7 +2,9 @@
   "DocumentConnection": {
     "type": "DocumentConnection",
     "resolveType": "multiCollectionDocumentList",
-    "collections": ["pages"]
+    "collections": [
+      "pages"
+    ]
   },
   "Node": {
     "type": "Node",
@@ -23,6 +25,8 @@
       "heroV2": "PagesBlocksHeroV2",
       "heroV3": "PagesBlocksHeroV3",
       "featuresV1": "PagesBlocksFeaturesV1",
+      "featuresV2": "PagesBlocksFeaturesV2",
+      "featuresV3": "PagesBlocksFeaturesV3",
       "projects": "PagesBlocksProjects",
       "vision": "PagesBlocksVision",
       "values": "PagesBlocksValues",

@@ -6,7 +6,7 @@ import { Query } from '../../.tina/__generated__/types'
 
 import Navigation from '@blocks/Navigation'
 import { HeroV1, HeroV2, HeroV3 } from '@blocks/Hero'
-import { FeaturesV1 } from '@blocks/Features'
+import { FeaturesV1, FeaturesV2, FeaturesV3 } from '@blocks/Features'
 import Projects from '@blocks/Projects'
 import Vision from '@blocks/Vision'
 import Values from '@blocks/Values'
@@ -99,6 +99,21 @@ const query = `
               description
             }
           }
+          ...on PagesBlocksFeaturesV2 {
+            title
+            description
+            features {
+              title
+              description
+            }
+          }
+          ...on PagesBlocksFeaturesV3 {
+            features {
+              imageIcon
+              title
+              description
+            }
+          }
         }
       }
     }
@@ -148,6 +163,10 @@ const Index: React.FC<{ data: Query }> = (props) => {
             return <Footer key={idx} {...block} />
           case 'PagesBlocksFeaturesV1':
             return <FeaturesV1 key={idx} {...block} />
+          case 'PagesBlocksFeaturesV2':
+            return <FeaturesV2 key={idx} {...block} />
+          case 'PagesBlocksFeaturesV3':
+            return <FeaturesV3 key={idx} {...block} />
           default:
             return null
         }

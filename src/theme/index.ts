@@ -41,6 +41,9 @@ export default extendTheme({
     Menu,
   },
   colors: {
+    green: {
+      500: '#10B981',
+    },
     indigo: {
       600: '#4F46E5',
     },

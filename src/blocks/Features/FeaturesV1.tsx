@@ -5,7 +5,7 @@ import ResponsiveContainer from '@components/ResponsiveContainer'
 import { PagesBlocksFeaturesV1 } from '../../../.tina/__generated__/types'
 
 const FeaturesV1: React.FC<PagesBlocksFeaturesV1> = ({ title, subtitle, description, features }) => (
-  <ResponsiveContainer py={{ xs: 20, lg: 40 }}>
+  <ResponsiveContainer py={{ xs: 20, lg: 24 }}>
     <VStack spacing={2} mb={4} alignItems={{ sm: 'flex-start', lg: 'center' }}>
       <Text textTransform="uppercase" color="indigo.600" fontWeight="semibold">
         {title}
