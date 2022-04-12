@@ -19,6 +19,7 @@
     "resolveType": "unionData",
     "typeMap": {
       "navigation": "PagesBlocksNavigation",
+      "heroV1": "PagesBlocksHeroV1",
       "heroV2": "PagesBlocksHeroV2",
       "heroV3": "PagesBlocksHeroV3",
       "projects": "PagesBlocksProjects",

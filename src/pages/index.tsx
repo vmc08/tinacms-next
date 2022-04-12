@@ -5,7 +5,7 @@ import { useTina } from 'tinacms/dist/edit-state'
 import { Query } from '../../.tina/__generated__/types'
 
 import Navigation from '@blocks/Navigation'
-import { HeroV2, HeroV3 } from '@blocks/Hero'
+import { HeroV1, HeroV2, HeroV3 } from '@blocks/Hero'
 import Projects from '@blocks/Projects'
 import Vision from '@blocks/Vision'
 import Values from '@blocks/Values'
@@ -31,6 +31,19 @@ const query = `
               label
               link
               variant
+            }
+          }
+          ...on PagesBlocksHeroV1 {
+            title
+            description
+            background
+            form {
+              placeholder
+              button {
+                link
+                label
+                variant
+              }
             }
           }
           ... on PagesBlocksHeroV2 {
@@ -108,6 +121,8 @@ const Index: React.FC<{ data: Query }> = (props) => {
         switch (block?.__typename) {
           case 'PagesBlocksNavigation':
             return <Navigation key={idx} {...block} />
+          case 'PagesBlocksHeroV1':
+            return <HeroV1 key={idx} {...block} />
           case 'PagesBlocksHeroV2':
             return <HeroV2 key={idx} {...block} />
           case 'PagesBlocksHeroV3':

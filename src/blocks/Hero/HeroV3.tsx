@@ -21,7 +21,7 @@ const HeroV3: React.FC<PagesBlocksHeroV3> = ({ title, description, background, a
           {title}
         </Heading>
         <Box maxW={{ lg: '45%' }}>
-          <Text fontSize={{ lg: 'lg' }} color="gray.600">
+          <Text fontSize="lg" color="gray.600">
             {description}
           </Text>
         </Box>
@@ -33,14 +33,19 @@ const HeroV3: React.FC<PagesBlocksHeroV3> = ({ title, description, background, a
           justifyContent="space-around"
         >
           {actionButtons?.map((ab, idx) => (
-            <Button width={{ xs: 'full', lg: 'auto' }} key={idx} {...(ab?.variant && { variant: ab?.variant })}>
+            <Button
+              colorScheme="blue"
+              width={{ xs: 'full', lg: 'auto' }}
+              key={idx}
+              {...(ab?.variant && { variant: ab?.variant })}
+            >
               {ab?.label}
             </Button>
           ))}{' '}
         </Stack>
         <Box textAlign="center">
-          <Text>We care about the protection of your data.</Text>
-          <Text>Read our Privacy Policy.</Text>
+          <Text fontSize="sm">We care about the protection of your data.</Text>
+          <Text fontSize="sm">Read our Privacy Policy.</Text>
         </Box>
       </VStack>
     </ResponsiveContainer>

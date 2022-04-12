@@ -25,6 +25,18 @@ blocks:
         link: /sign-up
         variant: solid
     _template: navigation
+  - title: Get help with coding from engineers.
+    description: >-
+      Learn how to code efficiently and create apps and games that work. Consult
+      with best epxerts to apply skills in action.
+    form:
+      placeholder: Enter your email
+      button:
+        label: Sign up
+        variant: solid
+    background: >-
+      https://res.cloudinary.com/vmc08/image/upload/v1649772073/hero-img_xyzuzc.png
+    _template: heroV1
   - title: Let your curiosity do the booking
     description: Inspiration for your next trip
     background: >-

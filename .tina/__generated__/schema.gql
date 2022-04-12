@@ -100,6 +100,24 @@ type PagesBlocksNavigation {
   rightMenuItems: [PagesBlocksNavigationRightMenuItems]
 }
 
+type PagesBlocksHeroV1FormButton {
+  label: String
+  link: String
+  variant: String
+}
+
+type PagesBlocksHeroV1Form {
+  placeholder: String
+  button: PagesBlocksHeroV1FormButton
+}
+
+type PagesBlocksHeroV1 {
+  title: String
+  description: String
+  form: PagesBlocksHeroV1Form
+  background: String
+}
+
 type PagesBlocksHeroV2Button {
   label: String
   link: String
@@ -158,7 +176,7 @@ type PagesBlocksFooter {
   menuItems: [PagesBlocksFooterMenuItems]
 }
 
-union PagesBlocks = PagesBlocksNavigation | PagesBlocksHeroV2 | PagesBlocksHeroV3 | PagesBlocksProjects | PagesBlocksVision | PagesBlocksValues | PagesBlocksFooter
+union PagesBlocks = PagesBlocksNavigation | PagesBlocksHeroV1 | PagesBlocksHeroV2 | PagesBlocksHeroV3 | PagesBlocksProjects | PagesBlocksVision | PagesBlocksValues | PagesBlocksFooter
 
 type Pages {
   blocks: [PagesBlocks]
@@ -217,6 +235,24 @@ input PagesBlocksNavigationMutation {
   alignment: String
   menuItems: [PagesBlocksNavigationMenuItemsMutation]
   rightMenuItems: [PagesBlocksNavigationRightMenuItemsMutation]
+}
+
+input PagesBlocksHeroV1FormButtonMutation {
+  label: String
+  link: String
+  variant: String
+}
+
+input PagesBlocksHeroV1FormMutation {
+  placeholder: String
+  button: PagesBlocksHeroV1FormButtonMutation
+}
+
+input PagesBlocksHeroV1Mutation {
+  title: String
+  description: String
+  form: PagesBlocksHeroV1FormMutation
+  background: String
 }
 
 input PagesBlocksHeroV2ButtonMutation {
@@ -279,6 +315,7 @@ input PagesBlocksFooterMutation {
 
 input PagesBlocksMutation {
   navigation: PagesBlocksNavigationMutation
+  heroV1: PagesBlocksHeroV1Mutation
   heroV2: PagesBlocksHeroV2Mutation
   heroV3: PagesBlocksHeroV3Mutation
   projects: PagesBlocksProjectsMutation

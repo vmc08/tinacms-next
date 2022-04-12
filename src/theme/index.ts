@@ -20,7 +20,8 @@ export default extendTheme({
       h1: {
         fontSize: {
           xs: '32px !important',
-          lg: '48px !important',
+          md: '58px !important',
+          lg: '52px !important',
         },
       },
       h2: {

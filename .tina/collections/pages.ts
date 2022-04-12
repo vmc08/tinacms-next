@@ -1,6 +1,7 @@
 import { TinaCloudCollection } from '@tinacms/cli'
 
 import navigation from './templates/navigation'
+import heroV1 from './templates/heroV1'
 import heroV2 from './templates/heroV2'
 import heroV3 from './templates/heroV3'
 import projects from './templates/projects'
@@ -18,7 +19,7 @@ const pages: TinaCloudCollection = {
       list: true,
       label: 'Page Blocks',
       name: 'blocks',
-      templates: [navigation, heroV2, heroV3, projects, vision, values, footer],
+      templates: [navigation, heroV1, heroV2, heroV3, projects, vision, values, footer],
     },
   ],
 }

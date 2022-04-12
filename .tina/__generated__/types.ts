@@ -163,6 +163,27 @@ export type PagesBlocksNavigation = {
   rightMenuItems?: Maybe<Array<Maybe<PagesBlocksNavigationRightMenuItems>>>
 }
 
+export type PagesBlocksHeroV1FormButton = {
+  __typename?: 'PagesBlocksHeroV1FormButton'
+  label?: Maybe<Scalars['String']>
+  link?: Maybe<Scalars['String']>
+  variant?: Maybe<Scalars['String']>
+}
+
+export type PagesBlocksHeroV1Form = {
+  __typename?: 'PagesBlocksHeroV1Form'
+  placeholder?: Maybe<Scalars['String']>
+  button?: Maybe<PagesBlocksHeroV1FormButton>
+}
+
+export type PagesBlocksHeroV1 = {
+  __typename?: 'PagesBlocksHeroV1'
+  title?: Maybe<Scalars['String']>
+  description?: Maybe<Scalars['String']>
+  form?: Maybe<PagesBlocksHeroV1Form>
+  background?: Maybe<Scalars['String']>
+}
+
 export type PagesBlocksHeroV2Button = {
   __typename?: 'PagesBlocksHeroV2Button'
   label?: Maybe<Scalars['String']>
@@ -234,6 +255,7 @@ export type PagesBlocksFooter = {
 
 export type PagesBlocks =
   | PagesBlocksNavigation
+  | PagesBlocksHeroV1
   | PagesBlocksHeroV2
   | PagesBlocksHeroV3
   | PagesBlocksProjects
@@ -334,6 +356,24 @@ export type PagesBlocksNavigationMutation = {
   rightMenuItems?: InputMaybe<Array<InputMaybe<PagesBlocksNavigationRightMenuItemsMutation>>>
 }
 
+export type PagesBlocksHeroV1FormButtonMutation = {
+  label?: InputMaybe<Scalars['String']>
+  link?: InputMaybe<Scalars['String']>
+  variant?: InputMaybe<Scalars['String']>
+}
+
+export type PagesBlocksHeroV1FormMutation = {
+  placeholder?: InputMaybe<Scalars['String']>
+  button?: InputMaybe<PagesBlocksHeroV1FormButtonMutation>
+}
+
+export type PagesBlocksHeroV1Mutation = {
+  title?: InputMaybe<Scalars['String']>
+  description?: InputMaybe<Scalars['String']>
+  form?: InputMaybe<PagesBlocksHeroV1FormMutation>
+  background?: InputMaybe<Scalars['String']>
+}
+
 export type PagesBlocksHeroV2ButtonMutation = {
   label?: InputMaybe<Scalars['String']>
   link?: InputMaybe<Scalars['String']>
@@ -394,6 +434,7 @@ export type PagesBlocksFooterMutation = {
 
 export type PagesBlocksMutation = {
   navigation?: InputMaybe<PagesBlocksNavigationMutation>
+  heroV1?: InputMaybe<PagesBlocksHeroV1Mutation>
   heroV2?: InputMaybe<PagesBlocksHeroV2Mutation>
   heroV3?: InputMaybe<PagesBlocksHeroV3Mutation>
   projects?: InputMaybe<PagesBlocksProjectsMutation>
@@ -428,6 +469,22 @@ export type PagesPartsFragment = {
           link?: string | null
           variant?: string | null
         } | null> | null
+      }
+    | {
+        __typename: 'PagesBlocksHeroV1'
+        title?: string | null
+        description?: string | null
+        background?: string | null
+        form?: {
+          __typename: 'PagesBlocksHeroV1Form'
+          placeholder?: string | null
+          button?: {
+            __typename: 'PagesBlocksHeroV1FormButton'
+            label?: string | null
+            link?: string | null
+            variant?: string | null
+          } | null
+        } | null
       }
     | {
         __typename: 'PagesBlocksHeroV2'
@@ -518,6 +575,22 @@ export type GetPagesDocumentQuery = {
               link?: string | null
               variant?: string | null
             } | null> | null
+          }
+        | {
+            __typename: 'PagesBlocksHeroV1'
+            title?: string | null
+            description?: string | null
+            background?: string | null
+            form?: {
+              __typename: 'PagesBlocksHeroV1Form'
+              placeholder?: string | null
+              button?: {
+                __typename: 'PagesBlocksHeroV1FormButton'
+                label?: string | null
+                link?: string | null
+                variant?: string | null
+              } | null
+            } | null
           }
         | {
             __typename: 'PagesBlocksHeroV2'
@@ -615,6 +688,22 @@ export type GetPagesListQuery = {
                 } | null> | null
               }
             | {
+                __typename: 'PagesBlocksHeroV1'
+                title?: string | null
+                description?: string | null
+                background?: string | null
+                form?: {
+                  __typename: 'PagesBlocksHeroV1Form'
+                  placeholder?: string | null
+                  button?: {
+                    __typename: 'PagesBlocksHeroV1FormButton'
+                    label?: string | null
+                    link?: string | null
+                    variant?: string | null
+                  } | null
+                } | null
+              }
+            | {
                 __typename: 'PagesBlocksHeroV2'
                 title?: string | null
                 description?: string | null
@@ -689,6 +778,21 @@ export const PagesPartsFragmentDoc = gql`
           link
           variant
         }
+      }
+      ... on PagesBlocksHeroV1 {
+        title
+        description
+        form {
+          __typename
+          placeholder
+          button {
+            __typename
+            label
+            link
+            variant
+          }
+        }
+        background
       }
       ... on PagesBlocksHeroV2 {
         title

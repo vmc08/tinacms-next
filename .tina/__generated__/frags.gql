@@ -20,6 +20,21 @@ fragment PagesParts on Pages {
         variant
       }
     }
+    ... on PagesBlocksHeroV1 {
+      title
+      description
+      form {
+        __typename
+        placeholder
+        button {
+          __typename
+          label
+          link
+          variant
+        }
+      }
+      background
+    }
     ... on PagesBlocksHeroV2 {
       title
       description

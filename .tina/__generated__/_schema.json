@@ -103,6 +103,72 @@
               "namespace": ["pages", "blocks", "navigation"]
             },
             {
+              "name": "heroV1",
+              "label": "Hero v1",
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Title",
+                  "name": "title",
+                  "namespace": ["pages", "blocks", "heroV1", "title"]
+                },
+                {
+                  "type": "string",
+                  "label": "Description",
+                  "name": "description",
+                  "namespace": ["pages", "blocks", "heroV1", "description"]
+                },
+                {
+                  "type": "object",
+                  "label": "Form",
+                  "name": "form",
+                  "fields": [
+                    {
+                      "type": "string",
+                      "label": "Placeholder",
+                      "name": "placeholder",
+                      "namespace": ["pages", "blocks", "heroV1", "form", "placeholder"]
+                    },
+                    {
+                      "type": "object",
+                      "label": "Button",
+                      "name": "button",
+                      "fields": [
+                        {
+                          "type": "string",
+                          "label": "Label",
+                          "name": "label",
+                          "namespace": ["pages", "blocks", "heroV1", "form", "button", "label"]
+                        },
+                        {
+                          "type": "string",
+                          "label": "Link",
+                          "name": "link",
+                          "namespace": ["pages", "blocks", "heroV1", "form", "button", "link"]
+                        },
+                        {
+                          "type": "string",
+                          "label": "Variant",
+                          "name": "variant",
+                          "options": ["ghost", "link", "outline", "solid", "unstyled"],
+                          "namespace": ["pages", "blocks", "heroV1", "form", "button", "variant"]
+                        }
+                      ],
+                      "namespace": ["pages", "blocks", "heroV1", "form", "button"]
+                    }
+                  ],
+                  "namespace": ["pages", "blocks", "heroV1", "form"]
+                },
+                {
+                  "type": "image",
+                  "label": "Background",
+                  "name": "background",
+                  "namespace": ["pages", "blocks", "heroV1", "background"]
+                }
+              ],
+              "namespace": ["pages", "blocks", "heroV1"]
+            },
+            {
               "name": "heroV2",
               "label": "Hero v2",
               "fields": [
