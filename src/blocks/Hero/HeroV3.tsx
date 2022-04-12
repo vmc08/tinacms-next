@@ -20,9 +20,11 @@ const HeroV3: React.FC<PagesBlocksHeroV3> = ({ title, description, background, a
         <Heading as="h1" color="gray.800">
           {title}
         </Heading>
-        <Text fontSize={{ lg: 'lg' }} color="gray.600">
-          {description}
-        </Text>
+        <Box maxW={{ lg: '45%' }}>
+          <Text fontSize={{ lg: 'lg' }} color="gray.600">
+            {description}
+          </Text>
+        </Box>
         <Stack
           width={{ xs: 'full', lg: 'auto' }}
           spacing={4}
