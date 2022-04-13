@@ -150,71 +150,88 @@ blocks:
           impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
           ratione.
     _template: featuresV3
-  - title: This will be another block
-    valueItems:
-      - image: >-
-          https://res.cloudinary.com/vmc08/image/upload/v1647244161/flyingTina_isq2gz.png
-        description: >-
-          Tina is an open-source, Git-backed CMS with the ability to add visual
-          editing to your NextJS site
-      - image: >-
-          https://res.cloudinary.com/vmc08/image/upload/v1647244161/flyingTina_isq2gz.png
-        description: >-
-          Tina is an open-source, Git-backed CMS with the ability to add visual
-          editing to your NextJS site
-      - image: >-
-          https://res.cloudinary.com/vmc08/image/upload/v1647244161/flyingTina_isq2gz.png
-        description: >-
-          Tina is an open-source, Git-backed CMS with the ability to add visual
-          editing to your NextJS site
-    _template: values
-  - title: This will be a long title with the description on the side
-    description: >-
-      Bacon ipsum dolor amet boudin biltong spare ribs tri-tip pork chop tongue
-      ribeye meatball shoulder. Bacon venison beef tri-tip pork loin drumstick
-      meatloaf pork chop shankle kielbasa. Biltong chicken tail burgdoggen
-      ground round. Pork belly pork pastrami short ribs drumstick. Prosciutto
-      pig bacon, spare ribs chuck bresaola meatloaf t-bone landjaeger short loin
-      sausage meatball. Ribeye pork chop chuck short loin cow tenderloin.
-
-
-      Chicken bacon leberkas, buffalo burgdoggen pork chop shoulder corned beef.
-      Flank beef leberkas meatball, biltong ground round cow bacon boudin
-      drumstick brisket fatback. Tenderloin jowl salami ham hock shankle
-      burgdoggen pork. Short loin strip steak fatback biltong beef sausage pork
-      chop jerky.
-
-
-      Biltong shoulder boudin beef pancetta leberkas pork chop fatback doner
-      capicola cupim buffalo pastrami. Landjaeger strip steak cupim, venison
-      capicola short ribs ham leberkas burgdoggen pancetta. Brisket meatloaf
-      burgdoggen prosciutto. Tail beef ribs flank ribeye, strip steak pork belly
-      short loin sausage chuck biltong venison turkey. Venison spare ribs
-      buffalo prosciutto corned beef turducken strip steak brisket pork chuck
-      ground round kielbasa. Flank swine sausage hamburger cupim, strip steak
-      tongue.
-
-
-      Does your lorem ipsum text long for something a little meatier? Give our
-      generator a try… it’s tasty!
-    _template: vision
-  - projectItem:
-      - link: /
-        image: >-
-          https://res.cloudinary.com/vmc08/image/upload/v1647244161/flyingTina_isq2gz.png
-      - link: /
-        image: >-
-          https://res.cloudinary.com/vmc08/image/upload/v1647244161/flyingTina_isq2gz.png
-      - link: /
-        image: >-
-          https://res.cloudinary.com/vmc08/image/upload/v1647244161/flyingTina_isq2gz.png
-    _template: projects
-  - menuItems:
-      - label: Facebook
-        link: /
-      - label: Twitter
-        link: /
-      - label: Linkedin
-        link: /
-    _template: footer
+  - logo: 'https://res.cloudinary.com/vmc08/image/upload/v1649817915/logo_wptxqg.png'
+    description: Making the world a better place through constructing elegant hierarchies.
+    socials:
+      - type: facebook
+        link: 'https://www.facebook.com/vmc08'
+      - type: instagram
+        link: 'https://www.instagram.com/vmc08insta'
+      - type: twitter
+        link: 'https://www.twitter.com/vmc088'
+      - type: github
+        link: 'https://www.github.com/vmc08'
+      - type: dribbble
+        link: 'https://www.dribbble.com/vmc08'
+    groups:
+      - groupName: Solutions
+        links:
+          - label: Marketing
+            link: '#marketing'
+          - label: Analytics
+            link: '#analytics'
+          - label: Commerce
+            link: '#commerce'
+          - label: Insights
+            link: '#insights'
+      - groupName: Support
+        links:
+          - label: Pricing
+            link: '#pricing'
+          - label: Documentation
+            link: '#documentation'
+          - label: Guides
+            link: '#guides'
+          - label: API Status
+            link: '#api-status'
+      - groupName: Company
+        links:
+          - label: About
+            link: '#about'
+          - label: Blog
+            link: '#blog'
+          - label: Jobs
+            link: '#jobs'
+          - label: Jobs
+            link: '#jobs'
+          - label: Press
+            link: '#press'
+          - label: Partners
+            link: '#partners'
+      - groupName: Legal
+        links:
+          - label: Claim
+            link: '#claim'
+          - label: Privacy
+            link: '#privacy'
+          - label: Terms
+            link: '#terms'
+    footNote: '© 2022 TinaCMS, Inc. All rights reserved.'
+    _template: foooterV1
+  - footNote: '© 2022 TinaCMS, Inc. All rights reserved.'
+    socials:
+      - type: facebook
+        link: 'https://www.facebook.com/vmc08'
+      - type: instagram
+        link: 'https://www.instagram.com/vmc08insta'
+      - type: twitter
+        link: 'https://www.twitter.com/vmc088'
+      - type: github
+        link: 'https://www.github.com/vmc08'
+      - type: dribbble
+        link: 'https://www.dribbble.com/vmc08'
+    links:
+      - label: About
+        link: '#about'
+      - label: Blog
+        link: '#blog'
+      - label: Jobs
+        link: '#jobs'
+      - label: Press
+        link: '#press'
+      - label: Accessibility
+        link: '#accessibility'
+      - label: Partners
+        link: '#partners'
+    _template: foooterV2
 ---

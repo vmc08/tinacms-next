@@ -7,10 +7,7 @@ import { Query } from '../../.tina/__generated__/types'
 import Navigation from '@blocks/Navigation'
 import { HeroV1, HeroV2, HeroV3 } from '@blocks/Hero'
 import { FeaturesV1, FeaturesV2, FeaturesV3 } from '@blocks/Features'
-import Projects from '@blocks/Projects'
-import Vision from '@blocks/Vision'
-import Values from '@blocks/Values'
-import Footer from '@blocks/Footer'
+import { FooterV1, FooterV2 } from '@blocks/Footer'
 
 const query = `
   query {
@@ -66,29 +63,6 @@ const query = `
               variant
             }
           }
-          ... on PagesBlocksProjects {
-            projectItem {
-              link
-              image
-            }
-          }
-          ... on PagesBlocksVision {
-            title
-            description
-          }
-          ... on PagesBlocksValues {
-            title
-            valueItems {
-              image
-              description
-            }
-          }
-          ... on PagesBlocksFooter {
-            menuItems {
-              label
-              link
-            }
-          }
           ...on PagesBlocksFeaturesV1 {
             title
             subtitle
@@ -112,6 +86,33 @@ const query = `
               imageIcon
               title
               description
+            }
+          }
+          ...on PagesBlocksFoooterV1 {
+            logo
+            description
+            footNote
+            socials {
+              type
+              link
+            }
+            groups {
+              groupName
+              links {
+                label
+                link
+              }
+            }
+          }
+          ...on PagesBlocksFoooterV2 {
+            footNote
+            socials {
+              type
+              link
+            }
+            links {
+              label
+              link
             }
           }
         }
@@ -153,20 +154,16 @@ const Index: React.FC<{ data: Query }> = (props) => {
             return <HeroV2 key={idx} {...block} />
           case 'PagesBlocksHeroV3':
             return <HeroV3 key={idx} {...block} />
-          case 'PagesBlocksProjects':
-            return <Projects key={idx} {...block} />
-          case 'PagesBlocksVision':
-            return <Vision key={idx} {...block} />
-          case 'PagesBlocksValues':
-            return <Values key={idx} {...block} />
-          case 'PagesBlocksFooter':
-            return <Footer key={idx} {...block} />
           case 'PagesBlocksFeaturesV1':
             return <FeaturesV1 key={idx} {...block} />
           case 'PagesBlocksFeaturesV2':
             return <FeaturesV2 key={idx} {...block} />
           case 'PagesBlocksFeaturesV3':
             return <FeaturesV3 key={idx} {...block} />
+          case 'PagesBlocksFoooterV1':
+            return <FooterV1 key={idx} {...block} />
+          case 'PagesBlocksFoooterV2':
+            return <FooterV2 key={idx} {...block} />
           default:
             return null
         }

@@ -103,12 +103,37 @@ fragment PagesParts on Pages {
         description
       }
     }
-    ... on PagesBlocksFooter {
-      menuItems {
+    ... on PagesBlocksFoooterV1 {
+      logo
+      description
+      socials {
+        __typename
+        type
+        link
+      }
+      groups {
+        __typename
+        groupName
+        links {
+          __typename
+          label
+          link
+        }
+      }
+      footNote
+    }
+    ... on PagesBlocksFoooterV2 {
+      socials {
+        __typename
+        type
+        link
+      }
+      links {
         __typename
         label
         link
       }
+      footNote
     }
   }
 }

@@ -26,17 +26,8 @@
                   "type": "string",
                   "label": "Menu Alignment",
                   "name": "alignment",
-                  "options": [
-                    "left",
-                    "center",
-                    "right"
-                  ],
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "navigation",
-                    "alignment"
-                  ]
+                  "options": ["left", "center", "right"],
+                  "namespace": ["pages", "blocks", "navigation", "alignment"]
                 },
                 {
                   "type": "object",
@@ -48,25 +39,13 @@
                       "type": "string",
                       "label": "Label",
                       "name": "label",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "navigation",
-                        "menuItems",
-                        "label"
-                      ]
+                      "namespace": ["pages", "blocks", "navigation", "menuItems", "label"]
                     },
                     {
                       "type": "string",
                       "label": "Link",
                       "name": "link",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "navigation",
-                        "menuItems",
-                        "link"
-                      ]
+                      "namespace": ["pages", "blocks", "navigation", "menuItems", "link"]
                     },
                     {
                       "type": "object",
@@ -78,44 +57,19 @@
                           "type": "string",
                           "label": "Label",
                           "name": "label",
-                          "namespace": [
-                            "pages",
-                            "blocks",
-                            "navigation",
-                            "menuItems",
-                            "subMenuItems",
-                            "label"
-                          ]
+                          "namespace": ["pages", "blocks", "navigation", "menuItems", "subMenuItems", "label"]
                         },
                         {
                           "type": "string",
                           "label": "Link",
                           "name": "link",
-                          "namespace": [
-                            "pages",
-                            "blocks",
-                            "navigation",
-                            "menuItems",
-                            "subMenuItems",
-                            "link"
-                          ]
+                          "namespace": ["pages", "blocks", "navigation", "menuItems", "subMenuItems", "link"]
                         }
                       ],
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "navigation",
-                        "menuItems",
-                        "subMenuItems"
-                      ]
+                      "namespace": ["pages", "blocks", "navigation", "menuItems", "subMenuItems"]
                     }
                   ],
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "navigation",
-                    "menuItems"
-                  ]
+                  "namespace": ["pages", "blocks", "navigation", "menuItems"]
                 },
                 {
                   "type": "object",
@@ -127,59 +81,26 @@
                       "type": "string",
                       "label": "Label",
                       "name": "label",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "navigation",
-                        "rightMenuItems",
-                        "label"
-                      ]
+                      "namespace": ["pages", "blocks", "navigation", "rightMenuItems", "label"]
                     },
                     {
                       "type": "string",
                       "label": "Link",
                       "name": "link",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "navigation",
-                        "rightMenuItems",
-                        "link"
-                      ]
+                      "namespace": ["pages", "blocks", "navigation", "rightMenuItems", "link"]
                     },
                     {
                       "type": "string",
                       "label": "Variant",
                       "name": "variant",
-                      "options": [
-                        "ghost",
-                        "link",
-                        "outline",
-                        "solid",
-                        "unstyled"
-                      ],
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "navigation",
-                        "rightMenuItems",
-                        "variant"
-                      ]
+                      "options": ["ghost", "link", "outline", "solid", "unstyled"],
+                      "namespace": ["pages", "blocks", "navigation", "rightMenuItems", "variant"]
                     }
                   ],
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "navigation",
-                    "rightMenuItems"
-                  ]
+                  "namespace": ["pages", "blocks", "navigation", "rightMenuItems"]
                 }
               ],
-              "namespace": [
-                "pages",
-                "blocks",
-                "navigation"
-              ]
+              "namespace": ["pages", "blocks", "navigation"]
             },
             {
               "name": "heroV1",
@@ -189,23 +110,13 @@
                   "type": "string",
                   "label": "Title",
                   "name": "title",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "heroV1",
-                    "title"
-                  ]
+                  "namespace": ["pages", "blocks", "heroV1", "title"]
                 },
                 {
                   "type": "string",
                   "label": "Description",
                   "name": "description",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "heroV1",
-                    "description"
-                  ]
+                  "namespace": ["pages", "blocks", "heroV1", "description"]
                 },
                 {
                   "type": "object",
@@ -216,13 +127,7 @@
                       "type": "string",
                       "label": "Placeholder",
                       "name": "placeholder",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "heroV1",
-                        "form",
-                        "placeholder"
-                      ]
+                      "namespace": ["pages", "blocks", "heroV1", "form", "placeholder"]
                     },
                     {
                       "type": "object",
@@ -233,82 +138,35 @@
                           "type": "string",
                           "label": "Label",
                           "name": "label",
-                          "namespace": [
-                            "pages",
-                            "blocks",
-                            "heroV1",
-                            "form",
-                            "button",
-                            "label"
-                          ]
+                          "namespace": ["pages", "blocks", "heroV1", "form", "button", "label"]
                         },
                         {
                           "type": "string",
                           "label": "Link",
                           "name": "link",
-                          "namespace": [
-                            "pages",
-                            "blocks",
-                            "heroV1",
-                            "form",
-                            "button",
-                            "link"
-                          ]
+                          "namespace": ["pages", "blocks", "heroV1", "form", "button", "link"]
                         },
                         {
                           "type": "string",
                           "label": "Variant",
                           "name": "variant",
-                          "options": [
-                            "ghost",
-                            "link",
-                            "outline",
-                            "solid",
-                            "unstyled"
-                          ],
-                          "namespace": [
-                            "pages",
-                            "blocks",
-                            "heroV1",
-                            "form",
-                            "button",
-                            "variant"
-                          ]
+                          "options": ["ghost", "link", "outline", "solid", "unstyled"],
+                          "namespace": ["pages", "blocks", "heroV1", "form", "button", "variant"]
                         }
                       ],
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "heroV1",
-                        "form",
-                        "button"
-                      ]
+                      "namespace": ["pages", "blocks", "heroV1", "form", "button"]
                     }
                   ],
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "heroV1",
-                    "form"
-                  ]
+                  "namespace": ["pages", "blocks", "heroV1", "form"]
                 },
                 {
                   "type": "image",
                   "label": "Background",
                   "name": "background",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "heroV1",
-                    "background"
-                  ]
+                  "namespace": ["pages", "blocks", "heroV1", "background"]
                 }
               ],
-              "namespace": [
-                "pages",
-                "blocks",
-                "heroV1"
-              ]
+              "namespace": ["pages", "blocks", "heroV1"]
             },
             {
               "name": "heroV2",
@@ -318,34 +176,19 @@
                   "type": "string",
                   "label": "Title",
                   "name": "title",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "heroV2",
-                    "title"
-                  ]
+                  "namespace": ["pages", "blocks", "heroV2", "title"]
                 },
                 {
                   "type": "string",
                   "label": "Description",
                   "name": "description",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "heroV2",
-                    "description"
-                  ]
+                  "namespace": ["pages", "blocks", "heroV2", "description"]
                 },
                 {
                   "type": "image",
                   "label": "Background",
                   "name": "background",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "heroV2",
-                    "background"
-                  ]
+                  "namespace": ["pages", "blocks", "heroV2", "background"]
                 },
                 {
                   "type": "object",
@@ -356,40 +199,19 @@
                       "type": "string",
                       "label": "Label",
                       "name": "label",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "heroV2",
-                        "button",
-                        "label"
-                      ]
+                      "namespace": ["pages", "blocks", "heroV2", "button", "label"]
                     },
                     {
                       "type": "string",
                       "label": "Link",
                       "name": "link",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "heroV2",
-                        "button",
-                        "link"
-                      ]
+                      "namespace": ["pages", "blocks", "heroV2", "button", "link"]
                     }
                   ],
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "heroV2",
-                    "button"
-                  ]
+                  "namespace": ["pages", "blocks", "heroV2", "button"]
                 }
               ],
-              "namespace": [
-                "pages",
-                "blocks",
-                "heroV2"
-              ]
+              "namespace": ["pages", "blocks", "heroV2"]
             },
             {
               "name": "heroV3",
@@ -399,34 +221,19 @@
                   "type": "string",
                   "label": "Title",
                   "name": "title",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "heroV3",
-                    "title"
-                  ]
+                  "namespace": ["pages", "blocks", "heroV3", "title"]
                 },
                 {
                   "type": "string",
                   "label": "Description",
                   "name": "description",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "heroV3",
-                    "description"
-                  ]
+                  "namespace": ["pages", "blocks", "heroV3", "description"]
                 },
                 {
                   "type": "image",
                   "label": "Background",
                   "name": "background",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "heroV3",
-                    "background"
-                  ]
+                  "namespace": ["pages", "blocks", "heroV3", "background"]
                 },
                 {
                   "type": "object",
@@ -438,59 +245,26 @@
                       "type": "string",
                       "label": "Label",
                       "name": "label",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "heroV3",
-                        "actionButtons",
-                        "label"
-                      ]
+                      "namespace": ["pages", "blocks", "heroV3", "actionButtons", "label"]
                     },
                     {
                       "type": "string",
                       "label": "Link",
                       "name": "link",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "heroV3",
-                        "actionButtons",
-                        "link"
-                      ]
+                      "namespace": ["pages", "blocks", "heroV3", "actionButtons", "link"]
                     },
                     {
                       "type": "string",
                       "label": "Variant",
                       "name": "variant",
-                      "options": [
-                        "ghost",
-                        "link",
-                        "outline",
-                        "solid",
-                        "unstyled"
-                      ],
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "heroV3",
-                        "actionButtons",
-                        "variant"
-                      ]
+                      "options": ["ghost", "link", "outline", "solid", "unstyled"],
+                      "namespace": ["pages", "blocks", "heroV3", "actionButtons", "variant"]
                     }
                   ],
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "heroV3",
-                    "actionButtons"
-                  ]
+                  "namespace": ["pages", "blocks", "heroV3", "actionButtons"]
                 }
               ],
-              "namespace": [
-                "pages",
-                "blocks",
-                "heroV3"
-              ]
+              "namespace": ["pages", "blocks", "heroV3"]
             },
             {
               "name": "featuresV1",
@@ -500,34 +274,19 @@
                   "type": "string",
                   "label": "Title",
                   "name": "title",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "featuresV1",
-                    "title"
-                  ]
+                  "namespace": ["pages", "blocks", "featuresV1", "title"]
                 },
                 {
                   "type": "string",
                   "label": "Sub Title",
                   "name": "subtitle",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "featuresV1",
-                    "subtitle"
-                  ]
+                  "namespace": ["pages", "blocks", "featuresV1", "subtitle"]
                 },
                 {
                   "type": "string",
                   "label": "Description",
                   "name": "description",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "featuresV1",
-                    "description"
-                  ]
+                  "namespace": ["pages", "blocks", "featuresV1", "description"]
                 },
                 {
                   "type": "object",
@@ -539,52 +298,25 @@
                       "type": "image",
                       "label": "Icon",
                       "name": "imageIcon",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "featuresV1",
-                        "features",
-                        "imageIcon"
-                      ]
+                      "namespace": ["pages", "blocks", "featuresV1", "features", "imageIcon"]
                     },
                     {
                       "type": "string",
                       "label": "Title",
                       "name": "title",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "featuresV1",
-                        "features",
-                        "title"
-                      ]
+                      "namespace": ["pages", "blocks", "featuresV1", "features", "title"]
                     },
                     {
                       "type": "string",
                       "label": "Description",
                       "name": "description",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "featuresV1",
-                        "features",
-                        "description"
-                      ]
+                      "namespace": ["pages", "blocks", "featuresV1", "features", "description"]
                     }
                   ],
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "featuresV1",
-                    "features"
-                  ]
+                  "namespace": ["pages", "blocks", "featuresV1", "features"]
                 }
               ],
-              "namespace": [
-                "pages",
-                "blocks",
-                "featuresV1"
-              ]
+              "namespace": ["pages", "blocks", "featuresV1"]
             },
             {
               "name": "featuresV2",
@@ -594,23 +326,13 @@
                   "type": "string",
                   "label": "Title",
                   "name": "title",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "featuresV2",
-                    "title"
-                  ]
+                  "namespace": ["pages", "blocks", "featuresV2", "title"]
                 },
                 {
                   "type": "string",
                   "label": "Description",
                   "name": "description",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "featuresV2",
-                    "description"
-                  ]
+                  "namespace": ["pages", "blocks", "featuresV2", "description"]
                 },
                 {
                   "type": "object",
@@ -622,40 +344,19 @@
                       "type": "string",
                       "label": "Title",
                       "name": "title",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "featuresV2",
-                        "features",
-                        "title"
-                      ]
+                      "namespace": ["pages", "blocks", "featuresV2", "features", "title"]
                     },
                     {
                       "type": "string",
                       "label": "Description",
                       "name": "description",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "featuresV2",
-                        "features",
-                        "description"
-                      ]
+                      "namespace": ["pages", "blocks", "featuresV2", "features", "description"]
                     }
                   ],
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "featuresV2",
-                    "features"
-                  ]
+                  "namespace": ["pages", "blocks", "featuresV2", "features"]
                 }
               ],
-              "namespace": [
-                "pages",
-                "blocks",
-                "featuresV2"
-              ]
+              "namespace": ["pages", "blocks", "featuresV2"]
             },
             {
               "name": "featuresV3",
@@ -671,52 +372,25 @@
                       "type": "image",
                       "label": "Icon",
                       "name": "imageIcon",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "featuresV3",
-                        "features",
-                        "imageIcon"
-                      ]
+                      "namespace": ["pages", "blocks", "featuresV3", "features", "imageIcon"]
                     },
                     {
                       "type": "string",
                       "label": "Title",
                       "name": "title",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "featuresV3",
-                        "features",
-                        "title"
-                      ]
+                      "namespace": ["pages", "blocks", "featuresV3", "features", "title"]
                     },
                     {
                       "type": "string",
                       "label": "Description",
                       "name": "description",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "featuresV3",
-                        "features",
-                        "description"
-                      ]
+                      "namespace": ["pages", "blocks", "featuresV3", "features", "description"]
                     }
                   ],
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "featuresV3",
-                    "features"
-                  ]
+                  "namespace": ["pages", "blocks", "featuresV3", "features"]
                 }
               ],
-              "namespace": [
-                "pages",
-                "blocks",
-                "featuresV3"
-              ]
+              "namespace": ["pages", "blocks", "featuresV3"]
             },
             {
               "name": "projects",
@@ -732,40 +406,19 @@
                       "type": "string",
                       "label": "Link",
                       "name": "link",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "projects",
-                        "projectItem",
-                        "link"
-                      ]
+                      "namespace": ["pages", "blocks", "projects", "projectItem", "link"]
                     },
                     {
                       "type": "image",
                       "label": "Image",
                       "name": "image",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "projects",
-                        "projectItem",
-                        "image"
-                      ]
+                      "namespace": ["pages", "blocks", "projects", "projectItem", "image"]
                     }
                   ],
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "projects",
-                    "projectItem"
-                  ]
+                  "namespace": ["pages", "blocks", "projects", "projectItem"]
                 }
               ],
-              "namespace": [
-                "pages",
-                "blocks",
-                "projects"
-              ]
+              "namespace": ["pages", "blocks", "projects"]
             },
             {
               "name": "vision",
@@ -775,12 +428,7 @@
                   "type": "string",
                   "label": "Title",
                   "name": "title",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "vision",
-                    "title"
-                  ]
+                  "namespace": ["pages", "blocks", "vision", "title"]
                 },
                 {
                   "type": "string",
@@ -789,19 +437,10 @@
                   "ui": {
                     "component": "textarea"
                   },
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "vision",
-                    "description"
-                  ]
+                  "namespace": ["pages", "blocks", "vision", "description"]
                 }
               ],
-              "namespace": [
-                "pages",
-                "blocks",
-                "vision"
-              ]
+              "namespace": ["pages", "blocks", "vision"]
             },
             {
               "name": "values",
@@ -811,12 +450,7 @@
                   "type": "string",
                   "label": "Title",
                   "name": "title",
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "values",
-                    "title"
-                  ]
+                  "namespace": ["pages", "blocks", "values", "title"]
                 },
                 {
                   "type": "object",
@@ -828,13 +462,7 @@
                       "type": "image",
                       "label": "Image",
                       "name": "image",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "values",
-                        "valueItems",
-                        "image"
-                      ]
+                      "namespace": ["pages", "blocks", "values", "valueItems", "image"]
                     },
                     {
                       "type": "string",
@@ -843,88 +471,158 @@
                       "ui": {
                         "component": "textarea"
                       },
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "values",
-                        "valueItems",
-                        "description"
-                      ]
+                      "namespace": ["pages", "blocks", "values", "valueItems", "description"]
                     }
                   ],
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "values",
-                    "valueItems"
-                  ]
+                  "namespace": ["pages", "blocks", "values", "valueItems"]
                 }
               ],
-              "namespace": [
-                "pages",
-                "blocks",
-                "values"
-              ]
+              "namespace": ["pages", "blocks", "values"]
             },
             {
-              "name": "footer",
-              "label": "Footer",
+              "name": "foooterV1",
+              "label": "Footer v1",
+              "fields": [
+                {
+                  "type": "image",
+                  "label": "Logo",
+                  "name": "logo",
+                  "namespace": ["pages", "blocks", "foooterV1", "logo"]
+                },
+                {
+                  "type": "string",
+                  "label": "Description",
+                  "name": "description",
+                  "namespace": ["pages", "blocks", "foooterV1", "description"]
+                },
+                {
+                  "type": "object",
+                  "label": "Socials",
+                  "name": "socials",
+                  "list": true,
+                  "fields": [
+                    {
+                      "type": "string",
+                      "label": "Type",
+                      "name": "type",
+                      "options": ["facebook", "instagram", "twitter", "github", "dribbble"],
+                      "namespace": ["pages", "blocks", "foooterV1", "socials", "type"]
+                    },
+                    {
+                      "type": "string",
+                      "label": "Link",
+                      "name": "link",
+                      "namespace": ["pages", "blocks", "foooterV1", "socials", "link"]
+                    }
+                  ],
+                  "namespace": ["pages", "blocks", "foooterV1", "socials"]
+                },
+                {
+                  "type": "object",
+                  "label": "Footer Groups",
+                  "name": "groups",
+                  "list": true,
+                  "fields": [
+                    {
+                      "type": "string",
+                      "label": "Group Name",
+                      "name": "groupName",
+                      "namespace": ["pages", "blocks", "foooterV1", "groups", "groupName"]
+                    },
+                    {
+                      "type": "object",
+                      "label": "Links",
+                      "name": "links",
+                      "list": true,
+                      "fields": [
+                        {
+                          "type": "string",
+                          "label": "Label",
+                          "name": "label",
+                          "namespace": ["pages", "blocks", "foooterV1", "groups", "links", "label"]
+                        },
+                        {
+                          "type": "string",
+                          "label": "Link",
+                          "name": "link",
+                          "namespace": ["pages", "blocks", "foooterV1", "groups", "links", "link"]
+                        }
+                      ],
+                      "namespace": ["pages", "blocks", "foooterV1", "groups", "links"]
+                    }
+                  ],
+                  "namespace": ["pages", "blocks", "foooterV1", "groups"]
+                },
+                {
+                  "type": "string",
+                  "label": "Foot Note",
+                  "name": "footNote",
+                  "namespace": ["pages", "blocks", "foooterV1", "footNote"]
+                }
+              ],
+              "namespace": ["pages", "blocks", "foooterV1"]
+            },
+            {
+              "name": "foooterV2",
+              "label": "Footer v2",
               "fields": [
                 {
                   "type": "object",
-                  "label": "Menu",
-                  "name": "menuItems",
+                  "label": "Socials",
+                  "name": "socials",
+                  "list": true,
+                  "fields": [
+                    {
+                      "type": "string",
+                      "label": "Type",
+                      "name": "type",
+                      "options": ["facebook", "instagram", "twitter", "github", "dribbble"],
+                      "namespace": ["pages", "blocks", "foooterV2", "socials", "type"]
+                    },
+                    {
+                      "type": "string",
+                      "label": "Link",
+                      "name": "link",
+                      "namespace": ["pages", "blocks", "foooterV2", "socials", "link"]
+                    }
+                  ],
+                  "namespace": ["pages", "blocks", "foooterV2", "socials"]
+                },
+                {
+                  "type": "object",
+                  "label": "Links",
+                  "name": "links",
                   "list": true,
                   "fields": [
                     {
                       "type": "string",
                       "label": "Label",
                       "name": "label",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "footer",
-                        "menuItems",
-                        "label"
-                      ]
+                      "namespace": ["pages", "blocks", "foooterV2", "links", "label"]
                     },
                     {
                       "type": "string",
                       "label": "Link",
                       "name": "link",
-                      "namespace": [
-                        "pages",
-                        "blocks",
-                        "footer",
-                        "menuItems",
-                        "link"
-                      ]
+                      "namespace": ["pages", "blocks", "foooterV2", "links", "link"]
                     }
                   ],
-                  "namespace": [
-                    "pages",
-                    "blocks",
-                    "footer",
-                    "menuItems"
-                  ]
+                  "namespace": ["pages", "blocks", "foooterV2", "links"]
+                },
+                {
+                  "type": "string",
+                  "label": "Foot Note",
+                  "name": "footNote",
+                  "namespace": ["pages", "blocks", "foooterV2", "footNote"]
                 }
               ],
-              "namespace": [
-                "pages",
-                "blocks",
-                "footer"
-              ]
+              "namespace": ["pages", "blocks", "foooterV2"]
             }
           ],
-          "namespace": [
-            "pages",
-            "blocks"
-          ]
+          "namespace": ["pages", "blocks"]
         }
       ],
-      "namespace": [
-        "pages"
-      ]
+      "namespace": ["pages"]
     }
   ]
 }

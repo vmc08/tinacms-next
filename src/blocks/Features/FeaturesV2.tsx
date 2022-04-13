@@ -11,12 +11,12 @@ const FeaturesV2: React.FC<PagesBlocksFeaturesV2> = ({ title, description, featu
         {title}
       </Heading>
     </VStack>
-    <Box textAlign="center" maxW={{ sm: 'full', lg: '50%' }} mx="auto" mb="10">
+    <Box textAlign="center" maxW={{ xs: 'full', lg: '50%' }} mx="auto" mb="10">
       <Text fontSize="lg" color="gray.500">
         {description}
       </Text>
     </Box>
-    <SimpleGrid columns={{ sm: 1, lg: 4 }} spacing={8}>
+    <SimpleGrid columns={{ xs: 1, lg: 4 }} spacing={8}>
       {features?.map((f, idx) => (
         <HStack key={idx} alignItems="flex-start" spacing={4}>
           <Icon fontSize="24px" color="green.500" as={CheckIcon} />

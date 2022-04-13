@@ -6,7 +6,7 @@ import { PagesBlocksFeaturesV1 } from '../../../.tina/__generated__/types'
 
 const FeaturesV1: React.FC<PagesBlocksFeaturesV1> = ({ title, subtitle, description, features }) => (
   <ResponsiveContainer py={{ xs: 20, lg: 24 }}>
-    <VStack spacing={2} mb={4} alignItems={{ sm: 'flex-start', lg: 'center' }}>
+    <VStack spacing={2} mb={4} alignItems={{ xs: 'flex-start', lg: 'center' }}>
       <Text textTransform="uppercase" color="indigo.600" fontWeight="semibold">
         {title}
       </Text>
@@ -14,12 +14,12 @@ const FeaturesV1: React.FC<PagesBlocksFeaturesV1> = ({ title, subtitle, descript
         {subtitle}
       </Heading>
     </VStack>
-    <Box textAlign={{ lg: 'center' }} maxW={{ sm: 'full', lg: '50%' }} mx="auto" mb="10">
+    <Box textAlign={{ lg: 'center' }} maxW={{ xs: 'full', lg: '50%' }} mx="auto" mb="10">
       <Text fontSize="lg" color="gray.500">
         {description}
       </Text>
     </Box>
-    <SimpleGrid columns={{ sm: 1, lg: 2 }} spacing={8}>
+    <SimpleGrid columns={{ xs: 1, lg: 2 }} spacing={8}>
       {features?.map((f, idx) => (
         <HStack key={idx} alignItems="flex-start" spacing={4}>
           {f?.imageIcon && (

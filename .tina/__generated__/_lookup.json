@@ -2,9 +2,7 @@
   "DocumentConnection": {
     "type": "DocumentConnection",
     "resolveType": "multiCollectionDocumentList",
-    "collections": [
-      "pages"
-    ]
+    "collections": ["pages"]
   },
   "Node": {
     "type": "Node",
@@ -30,7 +28,8 @@
       "projects": "PagesBlocksProjects",
       "vision": "PagesBlocksVision",
       "values": "PagesBlocksValues",
-      "footer": "PagesBlocksFooter"
+      "foooterV1": "PagesBlocksFoooterV1",
+      "foooterV2": "PagesBlocksFoooterV2"
     }
   },
   "PagesDocument": {

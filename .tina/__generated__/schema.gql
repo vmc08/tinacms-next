@@ -201,16 +201,46 @@ type PagesBlocksValues {
   valueItems: [PagesBlocksValuesValueItems]
 }
 
-type PagesBlocksFooterMenuItems {
+type PagesBlocksFoooterV1Socials {
+  type: String
+  link: String
+}
+
+type PagesBlocksFoooterV1GroupsLinks {
   label: String
   link: String
 }
 
-type PagesBlocksFooter {
-  menuItems: [PagesBlocksFooterMenuItems]
+type PagesBlocksFoooterV1Groups {
+  groupName: String
+  links: [PagesBlocksFoooterV1GroupsLinks]
 }
 
-union PagesBlocks = PagesBlocksNavigation | PagesBlocksHeroV1 | PagesBlocksHeroV2 | PagesBlocksHeroV3 | PagesBlocksFeaturesV1 | PagesBlocksFeaturesV2 | PagesBlocksFeaturesV3 | PagesBlocksProjects | PagesBlocksVision | PagesBlocksValues | PagesBlocksFooter
+type PagesBlocksFoooterV1 {
+  logo: String
+  description: String
+  socials: [PagesBlocksFoooterV1Socials]
+  groups: [PagesBlocksFoooterV1Groups]
+  footNote: String
+}
+
+type PagesBlocksFoooterV2Socials {
+  type: String
+  link: String
+}
+
+type PagesBlocksFoooterV2Links {
+  label: String
+  link: String
+}
+
+type PagesBlocksFoooterV2 {
+  socials: [PagesBlocksFoooterV2Socials]
+  links: [PagesBlocksFoooterV2Links]
+  footNote: String
+}
+
+union PagesBlocks = PagesBlocksNavigation | PagesBlocksHeroV1 | PagesBlocksHeroV2 | PagesBlocksHeroV3 | PagesBlocksFeaturesV1 | PagesBlocksFeaturesV2 | PagesBlocksFeaturesV3 | PagesBlocksProjects | PagesBlocksVision | PagesBlocksValues | PagesBlocksFoooterV1 | PagesBlocksFoooterV2
 
 type Pages {
   blocks: [PagesBlocks]
@@ -372,13 +402,43 @@ input PagesBlocksValuesMutation {
   valueItems: [PagesBlocksValuesValueItemsMutation]
 }
 
-input PagesBlocksFooterMenuItemsMutation {
+input PagesBlocksFoooterV1SocialsMutation {
+  type: String
+  link: String
+}
+
+input PagesBlocksFoooterV1GroupsLinksMutation {
   label: String
   link: String
 }
 
-input PagesBlocksFooterMutation {
-  menuItems: [PagesBlocksFooterMenuItemsMutation]
+input PagesBlocksFoooterV1GroupsMutation {
+  groupName: String
+  links: [PagesBlocksFoooterV1GroupsLinksMutation]
+}
+
+input PagesBlocksFoooterV1Mutation {
+  logo: String
+  description: String
+  socials: [PagesBlocksFoooterV1SocialsMutation]
+  groups: [PagesBlocksFoooterV1GroupsMutation]
+  footNote: String
+}
+
+input PagesBlocksFoooterV2SocialsMutation {
+  type: String
+  link: String
+}
+
+input PagesBlocksFoooterV2LinksMutation {
+  label: String
+  link: String
+}
+
+input PagesBlocksFoooterV2Mutation {
+  socials: [PagesBlocksFoooterV2SocialsMutation]
+  links: [PagesBlocksFoooterV2LinksMutation]
+  footNote: String
 }
 
 input PagesBlocksMutation {
@@ -392,7 +452,8 @@ input PagesBlocksMutation {
   projects: PagesBlocksProjectsMutation
   vision: PagesBlocksVisionMutation
   values: PagesBlocksValuesMutation
-  footer: PagesBlocksFooterMutation
+  foooterV1: PagesBlocksFoooterV1Mutation
+  foooterV2: PagesBlocksFoooterV2Mutation
 }
 
 input PagesMutation {
